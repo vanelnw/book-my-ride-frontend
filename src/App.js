@@ -10,7 +10,6 @@ function App() {
       <div>
         <h1>Home</h1>
         <Signup />
-        {/* <Navbar /> */}
       </div>
       <div className="container-fluid px-0 main-section">
         {/* <Routes>
