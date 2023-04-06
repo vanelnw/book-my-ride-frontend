@@ -15,7 +15,7 @@ const RegisterScreen = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    username: '',
+    name: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -57,10 +57,10 @@ const RegisterScreen = () => {
           <div className="input-field reg-field">
             <input
               type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-              value={formData.username}
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={formData.name}
               onChange={handleChange}
               required
             />

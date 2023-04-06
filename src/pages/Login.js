@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { userLogin } from '../features/auth/authActions';
 
 function Login() {
@@ -29,7 +29,10 @@ function Login() {
     <div className="loginPage">
       <form onSubmit={handleLogin} className="form">
         <div className="top">
-          <span>Have an account?</span>
+          <span>
+            Don&apos;t have an account yet?&nbsp;
+            <Link to="/register">Register Here</Link>
+          </span>
           <header>Login</header>
         </div>
         {error && <p className="errorMessage">{error}</p>}
