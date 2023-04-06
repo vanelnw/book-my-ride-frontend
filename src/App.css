@@ -2,7 +2,7 @@ body, html {
     height: 100vh;
   }
   
-  .loginPage { 
+  .loginPage, .registerPage { 
     background-image: url("./assets/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg");
     height: 100vh; 
     background-position: center;
@@ -48,10 +48,16 @@ header{
   background:  rgba(255,255,255,0.7);
   outline: none;
 }
+.reg-field {
+  margin-bottom: 15px;
+}
 ::-webkit-input-placeholder{
   color: #121212;
 }
 
+.whiteLink {
+  color: #fff;
+}
 .submit{
   border: none;
   border-radius: 30px;
