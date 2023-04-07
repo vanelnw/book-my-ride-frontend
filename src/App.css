@@ -108,3 +108,50 @@ label a {
   font-size: 18px;
   font-weight: 700;
 }
+
+.my-reservations-container {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservation {
+  background-color: bisque;
+  width: 90%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img-container {
+  width: 180px;
+  height: 180px;
+  margin-left: 20px;
+}
+
+.img {
+  width: 180px;
+  height: 180px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.details {
+  height: 180px;
+  width: 500px;
+  background-color: yellow;
+  font-size: large;
+  padding-left: 20px;
+}
+
+.descriptions {
+  background-color: rgb(85, 85, 247);
+  height: 180px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
