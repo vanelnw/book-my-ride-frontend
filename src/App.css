@@ -155,3 +155,28 @@ label a {
   padding-left: 20px;
   padding-right: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .reservation {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+
+  .details {
+    height: 180px;
+    width: 97%;
+    background-color: yellow;
+    font-size: large;
+    padding-left: 20px;
+  }
+}
