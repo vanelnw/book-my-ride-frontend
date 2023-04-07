@@ -108,3 +108,130 @@ label a {
   font-size: 18px;
   font-weight: 700;
 }
+
+
+.car-details{
+  margin-left: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 75vw;
+  height: 100vh;
+  gap: 30px;
+}
+
+.title{
+
+  text-align: end;
+  margin-bottom: 20px;
+    
+}
+
+.title > h2,p{
+    margin: 0;
+    text-align: end;
+}
+
+.title > p{
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.img-container{
+  flex: 2;
+  max-width: 100%;
+  height: auto;
+  min-width: 400px;
+  
+
+}
+
+.img-container > img {
+   width: 100%;
+   height: 100%;
+}
+
+.details-infos{
+  flex: 1 ;
+  min-width: 200px;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+
+}
+
+.fees{
+  width: 100%;
+  margin: 20px 0;
+}
+
+.fees div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.fees>:nth-child(2n + 1) {
+  background-color: rgb(198, 196, 196);
+}
+
+.fees div span{
+  color: #121212;
+}
+
+/* .fee{
+  display: flex;
+  justify-content: space-between;
+} */
+
+.colorPicker{
+  width: 150px;
+  height: 150px;
+}
+
+.more-btn{
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.more-btn svg{
+  color: orange;
+ }
+
+
+.reserve-btn{
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  height: 45px;
+  padding: 0 20px;
+  outline: none;
+  color: rgb(249, 249, 249);
+  background: rgb(122, 232, 78);
+  cursor: pointer;
+  transition: .3s ;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.reserve-btn:hover{
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+svg{
+  height: 1.5rem;
+  width: 1.5rem;
+}
