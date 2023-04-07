@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
@@ -5,7 +6,9 @@ import { useNavigate, Link } from 'react-router-dom';
 import { userLogin } from '../features/auth/authActions';
 
 function Login() {
-  const { loading, error, isAuthenticated } = useSelector((state) => state.auth);
+  const { loading, error, isAuthenticated } = useSelector(
+    (state) => state.auth,
+  );
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
@@ -37,10 +40,22 @@ function Login() {
         </div>
         {error && <p className="errorMessage">{error}</p>}
         <div className="input-field">
-          <input type="email" value={email} id="email" placeholder="email" name="email" onChange={(e) => setEmail(e.target.value)} />
+          <input
+            type="email"
+            value={email}
+            id="email"
+            placeholder="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </div>
         <div className="input-field">
-          <input type="password" value={password} placeholder="password" onChange={(e) => setPassword(e.target.value)} />
+          <input
+            type="password"
+            value={password}
+            placeholder="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </div>
         <button type="submit" className="submit" disabled={loading}>
           {loading ? 'Spinner' : 'Login'}
@@ -51,7 +66,9 @@ function Login() {
             <label htmlFor="check"> Remember Me</label>
           </div>
           <div className="two">
-            <label><a href="./LOGIN">Forgot password?</a></label>
+            <label>
+              <a href="./LOGIN">Forgot password?</a>
+            </label>
           </div>
         </div>
       </form>
