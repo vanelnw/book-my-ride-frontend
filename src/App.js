@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import RegisterScreen from './pages/Register';
+import CarDetails from './pages/CarDetails';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<RegisterScreen />} />
+        <Route path="/car" element={<CarDetails />} />
       </Routes>
     </Router>
   );
