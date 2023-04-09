@@ -3,6 +3,14 @@ html {
   height: 100vh;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.home {
+  width: 80%;
+}
+
 .loginPage,
 .registerPage {
   background-image: url("./assets/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg");
