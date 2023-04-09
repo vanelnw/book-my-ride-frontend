@@ -10,9 +10,9 @@
 // }
 
 // export default App;
-
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AddCar from './components/AddCar';
+// import Navbar from './components/Navbar';
 
 function App() {
   return (
