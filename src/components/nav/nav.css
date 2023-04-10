@@ -59,11 +59,28 @@ a {
   gap: 10px;
 }
 
-@media screen and (max-width: 768px) {
+.userInfo span {
+  color: black;
+}
+
+.sidebar button {
+  display: none;
+}
+
+@media screen and (min-width: 650px) and (max-width: 1020px) {
+  .logo {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
   .topnav {
     width: 100%;
     align-items: center;
     gap: 20px;
+  }
+
+  .logo {
+    width: 100%;
   }
 
   .auth {
@@ -72,9 +89,28 @@ a {
   }
 
   .userInfo {
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .sidebar button {
+    display: block;
+  }
+  .sidebar {
+    width: 70px !important;
+}
+
+  .navlinks{
+    display: none !important;
+  }
+
+  .navlinks.open{
+    display: block !important;
+    position: absolute;
+    z-index: 999;
+    width: 500px;
+    background-color: #fff;
+    margin-top: 10px;
   }
 }
 
@@ -134,12 +170,6 @@ a {
 
 .footer {
   font-size: 13px;
-}
-
-@media screen and (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
 }
 
 .homecontainer {

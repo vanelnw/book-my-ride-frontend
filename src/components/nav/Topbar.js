@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './nav.css';
-import logo from '../../assets/logo-no-background.png';
+import logo from '../../assets/logo-color.png';
 import { logout } from '../../features/auth/authSlice';
 
 const TopNav = () => {
@@ -18,8 +18,9 @@ const TopNav = () => {
 
   return (
     <div className="topnav">
-      <img src={logo} className="logo" alt="logo" />
-      <h2>BookMyRide</h2>
+      <div className="logo-cont">
+        <img src={logo} className="logo" alt="logo" />
+      </div>
       <div className="auth">
         {
         isAuthenticated ? (

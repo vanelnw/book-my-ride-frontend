@@ -8,8 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import RegisterScreen from './pages/Register';
-import Navbar from './pages/nav/Navbar';
-import TopNav from './pages/nav/Topbar';
+import Navbar from './components/nav/Navbar';
+import TopNav from './components/nav/Topbar';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);

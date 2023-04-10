@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {
   FaTwitter, FaFacebookF, FaPinterestP, FaVimeoV,
 } from 'react-icons/fa';
-import { TiSocialGooglePlus } from 'react-icons/ti';
+import { TiSocialGooglePlus, TiThMenu, TiTimes } from 'react-icons/ti';
 import './nav.css';
 
 const adminLinks = [
@@ -39,15 +39,29 @@ const SocialMedia = () => (
 const SideNav = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
   const data = JSON.parse(localStorage.getItem('user'));
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="bg-light">
       <div className="sidebar">
-        <ul className="navlinks">
+        <button className="btn btn-light d-md-none" type="button" onClick={toggleMenu}>
+          {isMenuOpen ? <TiTimes className="icons" /> : <TiThMenu className="icons" /> }
+        </button>
+        <ul className={`navlinks ${isMenuOpen ? 'open' : ''}`}>
           {data && isAuthenticated ? (adminLinks.map((link) => (
             <li key={link.id}>
               <NavLink
                 to={link.path}
                 className="btn btn-light"
+                onClick={handleLinkClick}
                 style={({ isActive }) => (isActive
                   ? {
                     color: '#fff',
@@ -65,6 +79,7 @@ const SideNav = () => {
               <NavLink
                 to={link.path}
                 className="btn btn-light"
+                onClick={handleLinkClick}
                 style={({ isActive }) => (isActive
                   ? {
                     color: '#fff',
@@ -77,8 +92,9 @@ const SideNav = () => {
               </NavLink>
             </li>
           ))}
+          <SocialMedia />
         </ul>
-        <SocialMedia />
+
       </div>
     </div>
   );
