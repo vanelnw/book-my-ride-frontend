@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import './nav.css';
-import logo from '../../assets/logo-color.png';
+import logo from '../../assets/logo.png';
 import { logout } from '../../features/auth/authSlice';
 
 const TopNav = () => {

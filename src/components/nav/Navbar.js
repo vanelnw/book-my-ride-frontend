@@ -22,7 +22,7 @@ const links = [
 ];
 
 const SocialMedia = () => (
-  <div className="position-absolute bottom-0 start-0">
+  <div className="position-absolute bottom-0 start-0 sosial-icons">
     <div className="socialmedia">
       <FaTwitter className="icons" />
       <FaFacebookF className="icons" />
@@ -51,8 +51,8 @@ const SideNav = () => {
 
   return (
     <div className="bg-light">
-      <div className="sidebar">
-        <button className="btn btn-light d-md-none" type="button" onClick={toggleMenu}>
+      <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
+        <button className="btn btn-light d-md-none hum" type="button" onClick={toggleMenu}>
           {isMenuOpen ? <TiTimes className="icons" /> : <TiThMenu className="icons" /> }
         </button>
         <ul className={`navlinks ${isMenuOpen ? 'open' : ''}`}>
@@ -92,9 +92,8 @@ const SideNav = () => {
               </NavLink>
             </li>
           ))}
-          <SocialMedia />
         </ul>
-
+        <SocialMedia />
       </div>
     </div>
   );
