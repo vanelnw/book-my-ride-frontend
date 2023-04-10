@@ -6,14 +6,12 @@ import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
 
-export const getAllCars = createAsyncThunk();
+const token = localStorage.getItem('userToken');
 
-export const getCarDetails = createAsyncThunk(
-  'car/detail',
-  async ({ carId }, { rejectWithValue }) => {
+export const fetchCars = createAsyncThunk(
+  'cars/fetchAll',
+  async (token, { rejectWithValue }) => {
     try {
-      const token = localStorage.getItem('userToken');
-
       const config = {
         headers: {
           'Content-Type': 'application/json',
@@ -21,17 +19,44 @@ export const getCarDetails = createAsyncThunk(
         },
       };
 
-      const { data } = await axios.get(
-        `${backendURL}/api/v1/cars/${carId}`,
-        config,
+      const response = await axios.get(`${backendURL}/api/v1/cars`, config);
+      const cars = response.data;
+
+      return cars;
+    } catch (error) {
+      // Return custom error message from API if any
+      const message = error.response ? error.response.data.message : error.message;
+
+      // Use toast library to display error message
+      toast.error(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+
+      return rejectWithValue(message);
+    }
+  },
+);
+
+export const deleteCar = createAsyncThunk(
+  'car/delete',
+  async ({ id }, { rejectWithValue }) => {
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      const { data } = await axios.delete(
+        `${backendURL}/api/v1/cars/${id}`, config,
       );
 
       toast.success(data.message, {
         position: toast.POSITION.TOP_CENTER,
       });
-
       return data;
     } catch (error) {
+      // return custom error message from API if any
       const message = error.response ? error.response.data.message : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
