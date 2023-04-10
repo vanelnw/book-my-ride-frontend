@@ -1,26 +1,21 @@
-// import React from 'react';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       Final Capstone
-//     </div>
-//   );
-// }
-
-// export default App;
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AddCar from './components/AddCar';
-// import Navbar from './components/Navbar';
+// import { fetchCars } from './features/car/carActions';
 
 function App() {
   return (
     <Router>
-      <Route exact path="/AddCar">
-        <AddCar />
-      </Route>
+      <ToastContainer />
+      <Routes>
+        <Route path="/AddCar" element={<AddCar />} />
+      </Routes>
     </Router>
   );
 }
+
 export default App;
