@@ -8,6 +8,8 @@ import AddCar from './components/AddCar';
 // import { fetchCars } from './features/car/carActions';
 
 function App() {
+  const { isAuthenticated } = useSelector((state) => state.auth);
+
   return (
     <Router>
       <ToastContainer />
