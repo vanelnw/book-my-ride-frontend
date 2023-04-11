@@ -11,7 +11,6 @@ export const fetchItems = createAsyncThunk('data/fetchItems', async () => {
     headers,
   });
   const data = await response.json();
-  console.log(data);
   if (response.ok) {
     return data.reservations;
   } else {
