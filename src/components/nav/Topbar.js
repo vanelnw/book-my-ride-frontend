@@ -42,10 +42,10 @@ const TopNav = () => {
         ) : (
           <>
             <button type="button" className="button">
-              <NavLink to="/sign_in" className="login">Login</NavLink>
+              <NavLink to="/login" className="login">Login</NavLink>
             </button>
             <button type="button" className="button">
-              <NavLink to="/sign_up" className="signup">Register</NavLink>
+              <NavLink to="/register" className="signup">Register</NavLink>
             </button>
 
           </>
