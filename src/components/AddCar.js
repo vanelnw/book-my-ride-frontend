@@ -17,9 +17,9 @@ const AddCar = () => {
     formData.append('car[make]', make);
     formData.append('car[model]', model);
     formData.append('car[year]', year);
-    formData.append('car[dailyRate', dailyRate);
-    formData.append('car[image', image);
-    formData.append('car[description', description);
+    formData.append('car[dailyRate]', dailyRate);
+    formData.append('car[image]', image);
+    formData.append('car[description]', description);
 
     dispatch(addCar(formData));
   };
@@ -43,7 +43,7 @@ const AddCar = () => {
 
       <label htmlFor="image">
         Image:
-        <input type="text" id="image" value={image} onChange={(e) => setImage(e.target.value)} />
+        <input type="file" id="image" value={image} onChange={(e) => setImage(e.target.value)} />
       </label>
 
       <label htmlFor="description">

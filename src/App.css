@@ -39,3 +39,46 @@
     transform: translateY(0);
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label > span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: hsl(210, 85%, 47%);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #cc6d00;
+}
