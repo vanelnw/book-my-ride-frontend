@@ -110,6 +110,10 @@ a {
   .sidebar button {
     display: block;
   }
+
+  .button {
+    padding: 8px 20px;
+  }
 }
 
 /* Sidenav */
@@ -123,6 +127,16 @@ a {
 
 .sidebar .hum {
   margin-left: 90%;
+  border: none;
+}
+
+.icons {
+  color: rgb(70, 70, 70);
+}
+
+.sidebar .hum .icons {
+  width: 35px !important;
+  height: 35px !important;
 }
 
 .sidebar.open {
@@ -213,10 +227,6 @@ a {
     align-items: center;
     gap: 3px;
     padding: 5px 5px 5px;
-  }
-
-  .icons {
-    color: rgb(70, 70, 70);
   }
 
   .footer {

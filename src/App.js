@@ -21,7 +21,7 @@ function App() {
         <Router>
           <TopNav />
           <div className="d-flex">
-            <Navbar />
+            {isAuthenticated && <Navbar /> }
             <div className="home">
               <ToastContainer />
               <Routes>
