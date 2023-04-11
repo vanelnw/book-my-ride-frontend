@@ -6,7 +6,9 @@ import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
 
-const token = localStorage.getItem('userToken');
+// const token = localStorage.getItem('userToken');
+
+const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE4NTUyODh9.bYgCc2LWxKPpNYXLYpZYbXJStysWatsqtrcDIEQzfQY';
 
 export const fetchCars = createAsyncThunk(
   'cars/fetchAll',

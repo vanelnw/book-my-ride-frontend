@@ -28,7 +28,7 @@ const AddCar = () => {
       image,
       description,
     };
-    console.log(car);
+    // console.log(car);
     dispatch(addCar(car));
   };
 
@@ -86,7 +86,7 @@ const AddCar = () => {
       <label htmlFor="daily-rate">
         Daily Rate:
         <input
-          type="text"
+          type="number"
           id="daily-rate"
           value={dailyRate}
           onChange={(e) => setDailyRate(e.target.value)}
