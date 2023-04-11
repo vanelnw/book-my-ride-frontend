@@ -6,7 +6,8 @@ import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
 
-const token = localStorage.getItem('userToken');
+// const token = localStorage.getItem('userToken');
+const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE0NDI3MTl9.n4aonGyDnJ-iIYONJhwW0vPBNl1pi42qCKF7Mrv8OsI';
 
 export const fetchCars = createAsyncThunk(
   'cars/fetchAll',
@@ -25,7 +26,9 @@ export const fetchCars = createAsyncThunk(
       return cars;
     } catch (error) {
       // Return custom error message from API if any
-      const message = error.response ? error.response.data.message : error.message;
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
 
       // Use toast library to display error message
       toast.error(message, {
@@ -48,7 +51,8 @@ export const deleteCar = createAsyncThunk(
         },
       };
       const { data } = await axios.delete(
-        `${backendURL}/api/v1/cars/${id}`, config,
+        `${backendURL}/api/v1/cars/${id}`,
+        config,
       );
 
       toast.success(data.message, {
@@ -57,7 +61,9 @@ export const deleteCar = createAsyncThunk(
       return data;
     } catch (error) {
       // return custom error message from API if any
-      const message = error.response ? error.response.data.message : error.message;
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });
@@ -68,20 +74,18 @@ export const deleteCar = createAsyncThunk(
 
 export const addCar = createAsyncThunk(
   'car/addCar',
-  async ({
-    make, model, year, price,
-  }, { rejectWithValue }) => {
+  async (car, { rejectWithValue }) => {
+    console.log(car);
     try {
       const config = {
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
       };
       const { data } = await axios.post(
         `${backendURL}/api/v1/cars/`,
-        {
-          make, model, year, price,
-        },
+        car,
         config,
       );
 
@@ -92,7 +96,9 @@ export const addCar = createAsyncThunk(
       return data;
     } catch (error) {
       // return custom error message from backend if present
-      const message = error.response ? error.response.data.message : error.message;
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });
