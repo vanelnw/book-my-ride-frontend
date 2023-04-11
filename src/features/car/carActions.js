@@ -6,8 +6,7 @@ import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
 
-// const token = localStorage.getItem('userToken');
-const token = 'eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE0NDI3MTl9.n4aonGyDnJ-iIYONJhwW0vPBNl1pi42qCKF7Mrv8OsI';
+const token = localStorage.getItem('userToken');
 
 export const fetchCars = createAsyncThunk(
   'cars/fetchAll',
@@ -75,7 +74,6 @@ export const deleteCar = createAsyncThunk(
 export const addCar = createAsyncThunk(
   'car/addCar',
   async (car, { rejectWithValue }) => {
-    console.log(car);
     try {
       const config = {
         headers: {
