@@ -35,11 +35,7 @@ function App() {
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
-                <Route
-                  exact
-                  path="/reservationList"
-                  element={<ReservationList />}
-                />
+                <Route path="/reservationList" element={<ReservationList />} />
               </Routes>
             </div>
           </div>

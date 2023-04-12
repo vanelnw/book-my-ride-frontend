@@ -162,20 +162,20 @@ label a {
   justify-content: space-around;
 }
 
-.img-container {
+.image-container {
   width: 180px;
   height: 180px;
   border-radius: 8px;
 }
 
-.img {
+.car-image {
   width: 180px;
   height: 180px;
   border-radius: 8px;
 }
 
-.details {
-  font-size: small;
+.reserved-car-details > p {
+  text-align: left;
 }
 
 @media screen and (max-width: 800px) {
@@ -202,14 +202,10 @@ label a {
     border-radius: 8px;
   }
 
-  .img {
+  .car-image {
     width: 180px;
     height: 180px;
     border-radius: 8px;
-  }
-
-  .details {
-    font-size: small;
   }
 }
 
@@ -268,7 +264,7 @@ label a {
   min-width: 400px;
 }
 
-.carContainer > img {
+/* .carContainer > img {
   width: 100%;
   height: 100%;
-}
+} */

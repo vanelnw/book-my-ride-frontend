@@ -32,10 +32,10 @@ const ReservationList = () => {
     <div className="my-reservations-container">
       {items.map((item) => (
         <div className="reservation" key={item.id}>
-          <div className="img-container skeleton">
-            <img className="img" src={item.car_image} alt="img" />
+          <div className="image-container skeleton">
+            <img className="car-image" src={item.car_image} alt="img" />
           </div>
-          <div className="details">
+          <div className="reserved-car-details">
             <p className="skeleton-text">
               Reserved at:
               {item.reservation_date}

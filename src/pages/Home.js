@@ -46,7 +46,9 @@ const Home = () => {
                 {item.daily_rate}
               </p>
 
-              <Link to={`/car/${item.id}`} className="btn-details">View Details</Link>
+              <Link to={`/car/${item.id}`} className="btn-details">
+                View Details
+              </Link>
             </div>
           </div>
         ))}
