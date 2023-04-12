@@ -4,7 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AddCar from './components/AddCar';
+import AddCar from './components/Addcar/AddCar';
 
 function App() {
   // const { isAuthenticated } = useSelector((state) => state.auth);
