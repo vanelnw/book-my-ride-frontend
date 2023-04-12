@@ -1,0 +1,103 @@
+.deleteContainer {
+  flex: 1;
+
+  /* width: 100%; */
+
+  /* margin-left: 20%; */
+  background-image: url("../../assets/audi-auto-vehicle-sports-car.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.deleteContainer > h2 {
+  margin: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.deleteContainer > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* flex-direction: column; */
+
+  /* justify-content: center; */
+  gap: 10px;
+
+  /* background-color: aquamarine; */
+  padding: 10px;
+
+  /* height: 100%; */
+}
+
+.delete-item {
+  /* flex: 1; */
+  width: 100%;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.car-Container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* .carContainer{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: -60px;
+  } */
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.delete-item button {
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .deleteContainer > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /* flex-direction: column;
+       justify-content: center; */
+    gap: 10px;
+
+    /* background-color: aquamarine; */
+    padding: 10px;
+
+    /* height: 100%; */
+  }
+
+  /* .delete-item{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 5px 30px;
+    border-radius: 20px;
+    flex-basis: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+
+  } */
+}

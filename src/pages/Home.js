@@ -1,21 +1,58 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { logout } from '../features/auth/authSlice';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import './Home.css';
+import { fetchItems } from '../features/car/carActions';
 
-function Home() {
+const Home = () => {
   const dispatch = useDispatch();
-  const handleLogout = (e) => {
-    e.preventDefault();
-    dispatch(logout());
-  };
+  const { loading, error, cars } = useSelector((state) => state.cars);
+
+  useEffect(() => {
+    dispatch(fetchItems());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return (
+      <div>
+        Error:
+        {error}
+      </div>
+    );
+  }
+
   return (
-    <div>
-      Home
-      <button type="button" className="button" onClick={handleLogout}>
-        Logout
-      </button>
+    <div className="container">
+      <div className="headline-cont">
+        <h1>Latest Models</h1>
+        <span>Please select a car</span>
+      </div>
+      <div className="cars-container">
+        {cars.map((item) => (
+          <div className="car-item" key={item.id}>
+            <img className="car-img" src={item.image} alt="car" />
+            <div className="car-det">
+              <h2>
+                {item.make}
+                {' '}
+                {item.model}
+              </h2>
+              <p className="price">
+                $
+                {item.daily_rate}
+              </p>
+
+              <Link to={`/car/${item.id}`} className="btn-details">View Details</Link>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default Home;

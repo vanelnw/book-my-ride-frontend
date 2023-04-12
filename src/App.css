@@ -3,6 +3,30 @@ html {
   height: 100vh;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.home {
+  flex: 1;
+  min-height: calc(100vh - 100px);
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    margin-left: 200px;
+  }
+
+  .home.full {
+    margin-left: 0;
+  }
+}
+
 .loginPage,
 .registerPage {
   background-image: url('./assets/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
@@ -13,10 +37,19 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {
   color: white;
+}
+
+.AppContainer {
+  display: flex;
 }
 
 .form {
@@ -227,4 +260,15 @@ label a {
 .loading {
   margin-top: -150px;
   color: #060606;
+}
+
+.carContainer {
+  width: 30%;
+  height: auto;
+  min-width: 400px;
+}
+
+.carContainer > img {
+  width: 100%;
+  height: 100%;
 }
