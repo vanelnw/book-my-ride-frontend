@@ -13,7 +13,14 @@ html {
 }
 
 .home {
-  /* width: 80%; */
+  flex: 1;
+  min-height: calc(100vh - 100px);
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    margin-left: 200px;
+  }
 }
 
 .loginPage,

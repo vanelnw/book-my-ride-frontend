@@ -12,9 +12,6 @@ function CarDetails() {
   const { id } = useParams();
   const car = useSelector((state) => selectCarById(state, parseInt(id, 10)));
 
-  // useEffect(() => {
-  // }, []);
-
   return (
     <div className="car-details">
       <div className="img-container">

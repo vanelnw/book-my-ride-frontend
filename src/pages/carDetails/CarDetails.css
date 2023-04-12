@@ -30,7 +30,7 @@ p {
 .img-container {
   width: 80%;
   height: auto;
-  min-width: 400px;
+  min-width: 310px;
 }
 
 .img-container > img {
@@ -132,15 +132,18 @@ svg {
 
 @media only screen and (min-width: 767px) {
   .car-details {
-    margin-left: 20%;
     flex-wrap: nowrap;
+    flex: 1;
+    padding: 0;
+    padding-right: 30px;
+    height: 100%;
   }
 
   .img-container {
     flex: 2;
     max-width: 100%;
     height: auto;
-    min-width: 400px;
+    min-width: 300px;
   }
 
   .details-infos {
