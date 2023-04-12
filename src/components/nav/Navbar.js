@@ -30,9 +30,7 @@ const SocialMedia = () => (
       <FaVimeoV className="icons" />
       <FaPinterestP className="icons" />
     </div>
-    <div>
-      <p className="footer">&copy; 2023 BookMyRide</p>
-    </div>
+    <p className="footer">&copy; 2023 BookMyRide</p>
   </div>
 );
 
@@ -49,6 +47,8 @@ const SideNav = () => {
     setIsMenuOpen(false);
   };
 
+  console.log(data);
+
   return (
     <div className="bg-light">
       <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
@@ -56,7 +56,7 @@ const SideNav = () => {
           {isMenuOpen ? <TiTimes className="icons" /> : <TiThMenu className="icons" /> }
         </button>
         <ul className={`navlinks ${isMenuOpen ? 'open' : ''}`}>
-          {data && isAuthenticated ? (adminLinks.map((link) => (
+          {data.role === 'admin' && isAuthenticated ? (adminLinks.map((link) => (
             <li key={link.id}>
               <NavLink
                 to={link.path}
@@ -85,6 +85,7 @@ const SideNav = () => {
                     color: '#fff',
                     backgroundColor: '#97bf0e',
                     width: '100%',
+                    padding: '10px',
                   }
                   : { color: '#3a3a3a', width: '100%' })}
               >
