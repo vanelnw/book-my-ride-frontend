@@ -47,8 +47,6 @@ const SideNav = () => {
     setIsMenuOpen(false);
   };
 
-  console.log(data);
-
   return (
     <div className="bg-light">
       <div className={`sidebar ${isMenuOpen ? 'open' : ''}`}>

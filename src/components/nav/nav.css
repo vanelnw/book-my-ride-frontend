@@ -1,6 +1,5 @@
 /* Top Nav */
 .topnav {
-  /* width: 98%; */
   position: sticky;
   top: 0;
   left: 0;
@@ -9,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.3rem 2.5rem;
+  background-color: #fff;
 }
 
 .logo-cont {
@@ -61,7 +61,6 @@ a {
 }
 
 .userInfo {
-  /* width: 100%; */
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -77,15 +76,8 @@ a {
   display: none;
 }
 
-/* @media screen and (min-width: 650px) and (max-width: 1020px) {
-  .logo {
-    width: 50%;
-  }
-} */
-
 @media screen and (max-width: 600px) {
   .topnav {
-    /* width: 100%; */
     align-items: center;
     gap: 20px;
     padding: 0.3rem;

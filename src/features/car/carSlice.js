@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCars, deleteCar } from './carActions';
+import { deleteCar, fetchItems } from './carActions';
 
 const initialState = {
   loading: false,
@@ -19,14 +19,17 @@ const carSlice = createSlice({
   },
   extraReducers: {
 
-    [fetchCars.fulfilled]: (state, { payload }) => {
-      state.loading = false;
-      state.success = true;
-      state.cars = payload;
+    [fetchItems.pending]: (state) => {
+      state.loading = true;
+      state.error = null;
     },
-    [fetchCars.rejected]: (state, { payload }) => {
+    [fetchItems.fulfilled]: (state, action) => {
       state.loading = false;
-      state.error = payload;
+      state.cars = action.payload;
+    },
+    [fetchItems.rejected]: (state, action) => {
+      state.loading = false;
+      state.error = action.error.message;
     },
 
     // log in user
