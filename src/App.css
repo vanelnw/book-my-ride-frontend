@@ -13,7 +13,18 @@ html {
 }
 
 .home {
-  /* width: 80%; */
+  flex: 1;
+  min-height: calc(100vh - 100px);
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    margin-left: 200px;
+  }
+
+  .home.full {
+    margin-left: 0;
+  }
 }
 
 .loginPage,
@@ -29,8 +40,16 @@ html {
   width: 100vw;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   color: white;
+}
+
+.AppContainer {
+  display: flex;
 }
 
 .form {
@@ -121,4 +140,15 @@ label a {
   text-align: center;
   font-size: 18px;
   font-weight: 700;
+}
+
+.carContainer {
+  width: 30%;
+  height: auto;
+  min-width: 400px;
+}
+
+.carContainer > img {
+  width: 100%;
+  height: 100%;
 }

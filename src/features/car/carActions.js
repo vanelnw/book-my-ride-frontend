@@ -40,6 +40,29 @@ export const fetchCars = createAsyncThunk(
     }
   },
 );
+const token = localStorage.getItem('userToken');
+
+export const fetchItems = createAsyncThunk('cardata/fetchItems', async (_, { rejectWithValue }) => {
+  try {
+    const jwtToken = localStorage.getItem('userToken'); // assuming your JWT token is stored in your Redux store
+    const headers = {
+      Authorization: `Bearer ${jwtToken}`,
+    };
+    const response = await fetch('http://127.0.0.1:4000/api/v1/cars', {
+      headers,
+    });
+    const cardata = await response.json();
+
+    return cardata;
+  } catch (error) {
+    const message = error.response ? error.response.data.message : error.message;
+    toast.error(message, {
+      position: toast.POSITION.TOP_CENTER,
+    });
+
+    return rejectWithValue(message);
+  }
+});
 
 export const deleteCar = createAsyncThunk(
   'car/delete',
@@ -54,6 +77,7 @@ export const deleteCar = createAsyncThunk(
       const { data } = await axios.delete(
         `${backendURL}/api/v1/cars/${id}`,
         config,
+        `${backendURL}/api/v1/cars/${id}`, config,
       );
 
       toast.success(data.message, {
@@ -65,6 +89,7 @@ export const deleteCar = createAsyncThunk(
       const message = error.response
         ? error.response.data.message
         : error.message;
+      const message = error.response ? error.response.data.message : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });
@@ -106,3 +131,4 @@ export const addCar = createAsyncThunk(
     }
   },
 );
+
