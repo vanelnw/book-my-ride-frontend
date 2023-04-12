@@ -8,25 +8,35 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import RegisterScreen from './pages/Register';
-import Navbar from './components/Navbar';
-import DeleteScreen from './pages/delete/DeleteScreen';
+import Navbar from './components/nav/Navbar';
+import TopNav from './components/nav/Topbar';
+import CarDetails from './pages/carDetails/CarDetails';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <Router>
-      <div className="AppContainer">
-        <ToastContainer />
-        <Navbar />
-        <Routes>
-          <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<RegisterScreen />} />
-          <Route path="/delete" element={<DeleteScreen />} />
-        </Routes>
+    <div className="App">
+      <div className="">
+
+        <Router>
+          <TopNav />
+          <div className="d-flex">
+            {isAuthenticated && <Navbar /> }
+            <div className="home">
+              <ToastContainer />
+              <Routes>
+                <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<RegisterScreen />} />
+                <Route path="/car/:id" element={<CarDetails />} />
+              </Routes>
+            </div>
+          </div>
+        </Router>
       </div>
-    </Router>
+    </div>
+
   );
 }
 
