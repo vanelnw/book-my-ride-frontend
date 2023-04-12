@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Deletescreen.css';
-import { deleteCar, fetchCars } from '../../features/cars/carActions';
-import { removeCar } from '../../features/cars/carSlice';
+import { deleteCar, fetchItems } from '../../features/car/carActions';
+import { removeCar } from '../../features/car/carSlice';
 
 function DeleteScreen() {
   const { cars } = useSelector((state) => state.cars);
@@ -15,10 +15,7 @@ function DeleteScreen() {
   };
 
   useEffect(() => {
-    const token = localStorage.getItem('userToken');
-    if (token) {
-      dispatch(fetchCars(token));
-    }
+    dispatch(fetchItems());
   }, [dispatch]);
 
   return (

@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchItems } from '../Redux/carsList/carsListSlice';
 import './Home.css';
+import { fetchItems } from '../features/car/carActions';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { loading, error, items } = useSelector((state) => state.cardata);
+  const { loading, error, cars } = useSelector((state) => state.cars);
 
   useEffect(() => {
     dispatch(fetchItems());
@@ -32,7 +32,7 @@ const Home = () => {
         <span>Please select a car</span>
       </div>
       <div className="cars-container">
-        {items.map((item) => (
+        {cars.map((item) => (
           <div className="car-item" key={item.id}>
             <img className="car-img" src={item.image} alt="car" />
             <div className="car-det">
