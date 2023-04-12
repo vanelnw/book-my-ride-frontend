@@ -110,7 +110,6 @@ label a {
 }
 
 .my-reservations-container {
-  background-color: green;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -148,7 +147,6 @@ label a {
 
 @media screen and (max-width: 800px) {
   .my-reservations-container {
-    background-color: green;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

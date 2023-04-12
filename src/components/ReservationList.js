@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchItems } from '../redux/reservationsList/reservationsListSlice';
@@ -21,7 +20,12 @@ const ReservationList = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return (
+      <div>
+        Error:
+        {error}
+      </div>
+    );
   }
 
   return (
@@ -32,12 +36,30 @@ const ReservationList = () => {
             <img className="img" src={item.car_image} alt="img" />
           </div>
           <div className="details">
-            <p>Reserved at: {item.reservation_date}</p>
-            <p>Due to: {item.due_date}</p>
-            <p>Name: {item.car_make}</p>
-            <p>Model: {item.car_model}</p>
-            <p>Year: {item.car_year}</p>
-            <p>Price: {item.car_price}</p>
+            <p>
+              Reserved at:
+              {item.reservation_date}
+            </p>
+            <p>
+              Due to:
+              {item.due_date}
+            </p>
+            <p>
+              Name:
+              {item.car_make}
+            </p>
+            <p>
+              Model:
+              {item.car_model}
+            </p>
+            <p>
+              Year:
+              {item.car_year}
+            </p>
+            <p>
+              Price:
+              {item.car_price}
+            </p>
           </div>
         </div>
       ))}

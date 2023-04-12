@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-else-return */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchItems = createAsyncThunk('data/fetchItems', async () => {
@@ -13,9 +11,8 @@ export const fetchItems = createAsyncThunk('data/fetchItems', async () => {
   const data = await response.json();
   if (response.ok) {
     return data.reservations;
-  } else {
-    throw new Error(data.message);
   }
+  throw new Error(data.message);
 });
 
 const dataSlice = createSlice({
