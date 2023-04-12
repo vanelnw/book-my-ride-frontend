@@ -21,6 +21,10 @@ html {
   .home {
     margin-left: 200px;
   }
+
+  .home.full {
+    margin-left:0;
+  }
 }
 
 .loginPage,

@@ -38,7 +38,7 @@
     justify-content: space-between;
   }
   
-  .carContainer{
+  .car-Container{
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -58,7 +58,7 @@
     border-radius: 50%;
   }
   
-  button{
+  .delete-item button{
     background-color: red;
     padding: 10px 20px;
     border-radius: 20px;
@@ -69,7 +69,7 @@
   }
 
 
-  @media only screen and (min-width: 480px) {
+  @media only screen and (min-width: 768px) {
 
     .deleteContainer > ul{
       display: flex;
