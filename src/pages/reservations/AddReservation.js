@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createReservation } from '../../features/reservations/addReservationSlice';
+import './AddReservation.css';
 
 const ReservationForm = () => {
   const user = localStorage.getItem('user');
