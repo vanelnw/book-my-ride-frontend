@@ -8,18 +8,24 @@ import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import RegisterScreen from './pages/Register';
+import Navbar from './components/Navbar';
+import DeleteScreen from './pages/delete/DeleteScreen';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
     <Router>
-      <ToastContainer />
-      <Routes>
-        <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<RegisterScreen />} />
-      </Routes>
+      <div className="AppContainer">
+        <ToastContainer />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<RegisterScreen />} />
+          <Route path="/delete" element={<DeleteScreen />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
