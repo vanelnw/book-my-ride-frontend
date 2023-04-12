@@ -32,6 +32,7 @@ function App() {
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
+                <Route path="/addReservation" element={<DeleteScreen />} />
               </Routes>
             </div>
           </div>

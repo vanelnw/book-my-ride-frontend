@@ -12,6 +12,10 @@ function CarDetails() {
   const { id } = useParams();
   const car = useSelector((state) => selectCarById(state, parseInt(id, 10)));
 
+  const addReservation = () => {
+    window.location.href = '/addReservation';
+  };
+
   return (
     <div className="car-details">
       <div className="img-container">
@@ -67,7 +71,7 @@ function CarDetails() {
 
         <img src={circular} alt="colorPicker" className="colorPicker" />
 
-        <button type="button" className="reserve-btn">
+        <button type="button" className="reserve-btn" onClick={() => addReservation()}>
           <AiOutlineSetting />
           {' '}
           Reserve
