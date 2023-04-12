@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import { createReservation } from '../../features/reservations/addReservationSlice';
 import './AddReservation.css';
 
 const ReservationForm = () => {
+  const location = useLocation();
+  const car = location?.state?.car;
   const user = localStorage.getItem('user');
   const [reservationData, setReservationData] = useState({
     reservationDate: '',
     dueDate: '',
-    carId: 1,
+    carId: car.id,
   });
 
   const dispatch = useDispatch();
@@ -28,7 +31,6 @@ const ReservationForm = () => {
         <div className={`message ${success ? 'success' : 'error'}`}>
           {message && <p>{message}</p>}
         </div>
-        {/* {error && <p className="message-style">{error}</p>} */}
         <div className="add-heading"><h2>Book the Car</h2></div>
         <form onSubmit={handleSubmit} className="add-reservation-form">
           <label htmlFor="username" className="reservation-item">
@@ -38,6 +40,17 @@ const ReservationForm = () => {
               id="username"
               name="username"
               defaultValue={JSON.parse(user).name}
+              readOnly
+              required
+            />
+          </label>
+          <label htmlFor="carName" className="reservation-item">
+            Car Name:
+            <input
+              type="text"
+              id="carName"
+              name="carName"
+              defaultValue={`${car.make} ${car.model}`}
               readOnly
               required
             />
@@ -68,25 +81,6 @@ const ReservationForm = () => {
               })}
             />
           </label>
-          {/* <label>
-            Car:
-            <select
-              value={reservationData.car_id}
-              onChange={(e) =>
-                setReservationData({
-                  ...reservationData,
-                  car_id: e.target.value,
-                })
-              }
-            >
-              <option value="">Select a car</option>
-              {cars.map((car) => (
-                <option key={car.id} value={car.id}>
-                  {car.make} {car.model} ({car.year})
-                </option>
-              ))}
-            </select>
-          </label> */}
           <button type="submit" className="book-btn">Book Now</button>
         </form>
       </div>

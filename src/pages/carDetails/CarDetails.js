@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { AiOutlineSetting, AiOutlineRightCircle } from 'react-icons/ai';
 import { BiChevronRight } from 'react-icons/bi';
 import circular from '../../assets/3LkGs.png';
@@ -11,9 +11,10 @@ import { selectCarById } from '../../features/car/carSlice';
 function CarDetails() {
   const { id } = useParams();
   const car = useSelector((state) => selectCarById(state, parseInt(id, 10)));
+  const navigate = useNavigate();
 
   const addReservation = () => {
-    window.location.href = '/addReservation';
+    navigate('/addReservation', { state: { car } });
   };
 
   return (
