@@ -27,12 +27,12 @@ function DeleteScreen() {
       <ul>
         {cars.map((car) => (
           <li key={car.id} className="delete-item">
-            <div className="carContainer">
+            <div className="car-Container">
               <img src={car.image} alt="car" />
             </div>
             <p>{car.make}</p>
             <p>{car.model}</p>
-            <p>{car.price}</p>
+            <p>{car.daily_rate}</p>
             {' '}
             <button type="button" onClick={() => handleDeleteItem(car.id)}>
               Delete
