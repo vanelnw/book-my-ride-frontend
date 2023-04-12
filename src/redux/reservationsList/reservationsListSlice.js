@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchItems = createAsyncThunk('data/fetchItems', async () => {
-  const jwtToken = localStorage.getItem('userToken'); // assuming your JWT token is stored in your Redux store
+  const jwtToken = localStorage.getItem('userToken');
   const headers = {
     Authorization: `Bearer ${jwtToken}`,
   };
@@ -23,19 +23,19 @@ const dataSlice = createSlice({
     items: [],
   },
   reducers: {},
-  extraReducers: {
-    [fetchItems.pending]: (state) => {
-      state.loading = true;
-      state.error = null;
-    },
-    [fetchItems.fulfilled]: (state, action) => {
-      state.loading = false;
-      state.items = action.payload;
-    },
-    [fetchItems.rejected]: (state, action) => {
-      state.loading = false;
-      state.error = action.error.message;
-    },
+  extraReducers: (builder) => {
+    builder.addCase(fetchItems.pending, (state) => {
+      const newState = { ...state, loading: true };
+      return newState;
+    });
+    builder.addCase(fetchItems.fulfilled, (state, action) => {
+      const newState = { ...state, items: action.payload, loading: false };
+      return newState;
+    });
+    builder.addCase(fetchItems.rejected, (state, action) => {
+      const newState = { ...state, items: '', error: action.error.message };
+      return newState;
+    });
   },
 });
 
