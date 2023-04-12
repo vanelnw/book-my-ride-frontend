@@ -30,9 +30,7 @@ const SocialMedia = () => (
       <FaVimeoV className="icons" />
       <FaPinterestP className="icons" />
     </div>
-    <div>
-      <p className="footer">&copy; 2023 BookMyRide</p>
-    </div>
+    <p className="footer">&copy; 2023 BookMyRide</p>
   </div>
 );
 

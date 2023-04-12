@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import RegisterScreen from './pages/Register';
 import Navbar from './components/nav/Navbar';
 import TopNav from './components/nav/Topbar';
+import CarDetails from './pages/carDetails/CarDetails';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -25,10 +26,10 @@ function App() {
             <div className="home">
               <ToastContainer />
               <Routes>
-
                 <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
+                <Route path="/car/:id" element={<CarDetails />} />
               </Routes>
             </div>
           </div>
