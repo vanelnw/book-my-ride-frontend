@@ -23,7 +23,7 @@ html {
   }
 
   .home.full {
-    margin-left:0;
+    margin-left: 0;
   }
 }
 
@@ -40,7 +40,7 @@ html {
   width: 100vw;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
@@ -48,7 +48,7 @@ a {
   color: white;
 }
 
-.AppContainer{
+.AppContainer {
   display: flex;
 }
 
