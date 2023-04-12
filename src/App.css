@@ -21,6 +21,10 @@ html {
   .home {
     margin-left: 200px;
   }
+
+  .home.full {
+    margin-left: 0;
+  }
 }
 
 .loginPage,
@@ -36,8 +40,16 @@ html {
   width: 100vw;
 }
 
+ul {
+  list-style-type: none;
+}
+
 a {
   color: white;
+}
+
+.AppContainer {
+  display: flex;
 }
 
 .form {

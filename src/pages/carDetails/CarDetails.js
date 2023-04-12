@@ -35,16 +35,16 @@ function CarDetails() {
             <span>{car.model}</span>
           </div>
           <div className="fee">
-            Option to purshase fee
+            Description
             {' '}
-            <span>$350</span>
+            <span>{car.description}</span>
           </div>
           <div className="fee">
-            Total ammount payable
+            Daily Rate
             {' '}
             <span>
               $
-              {car.price}
+              {car.daily_rate}
             </span>
           </div>
           <div className="fee">

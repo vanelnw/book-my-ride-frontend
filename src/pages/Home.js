@@ -20,7 +20,6 @@ function Home() {
       dispatch(fetchCars(token));
     }
   }, [dispatch]);
-
   return (
     <div>
       Home
