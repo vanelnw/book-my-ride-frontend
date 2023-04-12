@@ -12,6 +12,7 @@ import Navbar from './components/nav/Navbar';
 import TopNav from './components/nav/Topbar';
 import CarDetails from './pages/carDetails/CarDetails';
 import DeleteScreen from './pages/delete/DeleteScreen';
+import AddReservation from './pages/reservations/AddReservation';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -32,7 +33,7 @@ function App() {
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
-                <Route path="/addReservation" element={<DeleteScreen />} />
+                <Route path="/addReservation" element={<AddReservation />} />
               </Routes>
             </div>
           </div>
