@@ -1,5 +1,4 @@
 /* Home page */
-
 .cars-container {
   display: flex;
   flex-wrap: wrap;
@@ -15,13 +14,27 @@
   margin-right: 20px;
 }
 
-.car-img {
-  width: fit-content;
-  max-height: 200px;
-  object-fit: cover;
+.headline-cont {
+  text-align: center;
 }
 
-.car-details {
+.headline-cont span {
+  color: #000;
+  display: flex;
+}
+
+.car-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0%;
+}
+
+.car-img:hover {
+  width: 300px;
+}
+
+.car-det {
   width: 50%;
   padding: 20px;
   display: flex;
@@ -29,18 +42,13 @@
   justify-content: center;
 }
 
-h2 {
+.car-det h2 {
   font-size: 24px;
   margin: 0;
 }
 
-h3 {
-  font-size: 20px;
-  margin: 0;
-  color: #aaa;
-}
-
 .price {
+  text-align: left;
   font-size: 18px;
   margin: 10px 0;
 }
@@ -57,4 +65,38 @@ h3 {
 
 .btn-details:hover {
   background-color: #0069d9;
+}
+
+@media screen and (max-width: 800px) {
+  .cars-container {
+    display: block;
+  }
+
+  .car-item {
+    width: 95%;
+  }
+  
+  .car-det {
+    width: 100%;
+  }
+
+  .btn-details {
+    width: 80%;
+  }
+
+  .car-img {
+    width: fit-content;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    margin-left: 10px;
+  }
+
+  .cars-container {
+    margin: 0px;
+  }
+
 }

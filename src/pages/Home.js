@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className="">
+      <div className="headline-cont">
         <h1>Latest Models</h1>
         <span>Please select a car</span>
       </div>
@@ -35,12 +35,15 @@ const Home = () => {
         {items.map((item) => (
           <div className="car-item" key={item.id}>
             <img className="car-img" src={item.image} alt="car" />
-            <div className="car-details">
-              <h2>{item.make}</h2>
-              <h3>{item.model}</h3>
+            <div className="car-det">
+              <h2>
+                {item.make}
+                {' '}
+                {item.model}
+              </h2>
               <p className="price">
                 $
-                {item.price}
+                {item.daily_rate}
               </p>
 
               <Link to={`/car/${item.id}`} className="btn-details">View Details</Link>
