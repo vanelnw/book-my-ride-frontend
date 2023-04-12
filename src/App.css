@@ -15,8 +15,16 @@ html {
   align-items: center;
 }
 
+ul{
+  list-style-type: none;
+}
+
 a {
   color: white;
+}
+
+.AppContainer{
+  display: flex;
 }
 
 .form {
