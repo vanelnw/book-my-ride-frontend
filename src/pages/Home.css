@@ -28,6 +28,7 @@
   max-height: 200px;
   object-fit: cover;
   border-radius: 0%;
+  transition: width 0.3s ease;
 }
 
 .car-img:hover {
@@ -70,12 +71,14 @@
 @media screen and (max-width: 800px) {
   .cars-container {
     display: block;
+    margin: 0;
   }
 
   .car-item {
     width: 95%;
+    margin-right: 0;
   }
-  
+
   .car-det {
     width: 100%;
   }
@@ -86,17 +89,12 @@
 
   .car-img {
     width: fit-content;
+    max-height: 150px;
   }
-
 }
 
 @media screen and (max-width: 600px) {
   .home {
     margin-left: 10px;
   }
-
-  .cars-container {
-    margin: 0px;
-  }
-
 }
