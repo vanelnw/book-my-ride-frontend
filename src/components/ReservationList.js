@@ -36,27 +36,27 @@ const ReservationList = () => {
             <img className="img" src={item.car_image} alt="img" />
           </div>
           <div className="details">
-            <p>
+            <p className="skeleton-text">
               Reserved at:
               {item.reservation_date}
             </p>
-            <p>
+            <p className="skeleton-text">
               Due to:
               {item.due_date}
             </p>
-            <p>
+            <p className="skeleton-text">
               Name:
               {item.car_make}
             </p>
-            <p>
+            <p className="skeleton-text">
               Model:
               {item.car_model}
             </p>
-            <p>
+            <p className="skeleton-text">
               Year:
               {item.car_year}
             </p>
-            <p>
+            <p className="skeleton-text">
               Price:
               {item.car_price}
             </p>
