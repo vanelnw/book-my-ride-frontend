@@ -11,7 +11,7 @@ const adminLinks = [
   { id: 1, path: '/', text: 'MODELS' },
   { id: 2, path: '/reserve', text: 'RESERVE' },
   { id: 3, path: '/reservation', text: 'RESERVATIONS' },
-  { id: 4, path: '/add-car', text: 'ADD CAR' },
+  { id: 4, path: '/addCar', text: 'ADD CAR' },
   { id: 5, path: '/delete', text: 'DELETE' },
 ];
 

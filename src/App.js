@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCar from './components/Addcar/AddCar';
 import Login from './pages/Login';
@@ -14,15 +15,9 @@ import CarDetails from './pages/carDetails/CarDetails';
 import DeleteScreen from './pages/delete/DeleteScreen';
 
 function App() {
-  // const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   return (
-    <Router>
-      <ToastContainer />
-      <Routes>
-        <Route path="/AddCar" element={<AddCar />} />
-      </Routes>
-    </Router>
     <div className="App">
       <div className="">
 
@@ -38,6 +33,7 @@ function App() {
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
+                <Route path="/addCar" element={<AddCar />} />
               </Routes>
             </div>
           </div>

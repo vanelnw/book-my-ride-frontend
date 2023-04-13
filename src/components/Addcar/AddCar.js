@@ -22,7 +22,6 @@ const AddCar = () => {
       image,
       description,
     };
-    console.log(car);
     dispatch(addCar(car));
   };
 
