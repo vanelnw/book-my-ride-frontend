@@ -14,12 +14,13 @@ html {
 
 .home {
   flex: 1;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 60px);
 }
 
 @media only screen and (min-width: 768px) {
   .home {
     margin-left: 200px;
+    min-height: calc(100vh - 85px);
   }
 
   .home.full {
@@ -30,7 +31,7 @@ html {
 .loginPage,
 .registerPage {
   background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
-  height: 100vh;
+  height: calc(100vh - 85px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -60,13 +61,13 @@ a {
   gap: 20px;
 }
 
-span {
+/* span {
   color: #fff;
   font-size: small;
   display: flex;
   justify-content: center;
   padding: 10px 0 10px 0;
-}
+} */
 
 header {
   color: #fff;

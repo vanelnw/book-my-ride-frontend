@@ -9,6 +9,7 @@
   justify-content: space-between;
   padding: 0.3rem 2.5rem;
   background-color: #fff;
+  height: 80px;
 }
 
 .logo-cont {
@@ -82,6 +83,7 @@ a {
     gap: 20px;
     padding: 0.3rem;
     padding-right: 3rem;
+    height: 50px;
   }
 
   .logo {
@@ -120,7 +122,10 @@ a {
 }
 
 .sidebar .hum {
-  margin-left: 90%;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
   border: none;
 }
 
@@ -134,7 +139,7 @@ a {
 }
 
 .sidebar.open {
-  background-color: rgb(95, 237, 13);
+  background-color: #97bf0e;
 }
 
 .navlinks {
@@ -170,10 +175,10 @@ a {
 @media screen and (min-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 100px;
+    top: 85px;
     left: 0;
     width: 200px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 85px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -221,6 +226,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .btn-light:hover{
+      background-color: #97bf0e;
+      padding: 10px;
   }
 
   .socialmedia {

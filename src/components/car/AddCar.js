@@ -26,69 +26,75 @@ const AddCar = () => {
   };
 
   return (
-    <div className="innercontainer">
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="make">
-          Make:
-          <input
-            type="text"
-            id="make"
-            value={make}
-            onChange={(e) => setMake(e.target.value)}
-          />
-        </label>
+    <div className="addForm">
 
-        <label htmlFor="model">
-          Model:
-          <input
-            type="text"
-            id="model"
-            value={model}
-            onChange={(e) => setModel(e.target.value)}
-          />
-        </label>
+      <div className="innercontainer">
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="make">
+            Make:
+            <input
+              className="addInput"
+              type="text"
+              id="make"
+              value={make}
+              onChange={(e) => setMake(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="year">
-          Year:
-          <input
-            type="text"
-            id="year"
-            value={year}
-            onChange={(e) => setYear(e.target.value)}
-          />
-        </label>
+          <label htmlFor="model">
+            Model:
+            <input
+              className="addInput"
+              type="text"
+              id="model"
+              value={model}
+              onChange={(e) => setModel(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="image">
-          Image:
-          <input
-            type="file"
-            id="image"
-            value={image}
-            onChange={(e) => setImage(e.target.value)}
-          />
-        </label>
+          <label htmlFor="year">
+            Year:
+            <input
+              className="addInput"
+              type="text"
+              id="year"
+              value={year}
+              onChange={(e) => setYear(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="description">
-          Description:
-          <textarea
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </label>
+          <label htmlFor="image">
+            Image:
+            <input
+              type="file"
+              id="image"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+            />
+          </label>
 
-        <label htmlFor="daily-rate">
-          Daily Rate:
-          <input
-            type="number"
-            id="daily-rate"
-            value={dailyRate}
-            onChange={(e) => setDailyRate(e.target.value)}
-          />
-        </label>
+          <label htmlFor="description">
+            Description:
+            <textarea
+              id="description"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </label>
 
-        <button type="submit" className="btn-add-car">Add Car</button>
-      </form>
+          <label htmlFor="daily-rate">
+            Daily Rate:
+            <input
+              type="number"
+              id="daily-rate"
+              value={dailyRate}
+              onChange={(e) => setDailyRate(e.target.value)}
+            />
+          </label>
+
+          <button type="submit" className="btn-add-car">Add Car</button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -37,9 +37,12 @@ function CarDetails() {
           <div className="fee">
             Description:
             {' '}
-            {car.description.length > 40
-              ? `${car.description.substring(0, 40)}...`
-              : car.description}
+            <span>
+              {car.description.length > 40
+                ? `${car.description.substring(0, 40)}...`
+                : car.description}
+            </span>
+
           </div>
           <div className="fee">
             Daily Rate:
@@ -61,15 +64,17 @@ function CarDetails() {
           <span style={{ color: 'black' }}> Representative</span>
         </div>
 
-        <button type="button" className="more-btn">
-          DISCOVER MORE MODELS
-          {' '}
-          <BiChevronRight />
-        </button>
+        <Link to="/" className="">
+          <button type="button" className="more-btn">
+            DISCOVER MORE MODELS
+            {' '}
+            <BiChevronRight />
+          </button>
+        </Link>
 
         <img src={circular} alt="colorPicker" className="colorPicker" />
 
-        <Link to={`/addReservation/${car.id}`} className="btn-details">
+        <Link to={`/addReservation/${car.id}`} className="">
           <button type="button" className="reserve-btn">
             <AiOutlineSetting />
             {' '}

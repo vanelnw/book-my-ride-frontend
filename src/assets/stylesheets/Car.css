@@ -15,14 +15,29 @@ html {
   /* position: absolute; */
 }
 
+.addForm{
+  background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: white;
+  z-index: 2;
+}
+
 .innercontainer {
-  background-color: aqua;
-  width: 40vw;
+  background-color: rgba(151, 191, 14, 0.3);
+  /* width: 40vw; */
   height: 90vh;
 
   /* margin-top: 50px; */
   padding-top: 30px;
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
@@ -49,12 +64,16 @@ textarea,
 input[type="file"] {
   padding: 0.5rem;
   border-radius: 4px;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   font-size: 1rem;
 }
 
+/* .addInput{
+  width: 100% !important;
+} */
+
 .btn-add-car {
-  background-color: hsl(0, 85%, 47%);
+  background-color: #97bf0e;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;

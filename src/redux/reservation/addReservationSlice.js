@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
 
@@ -27,8 +28,16 @@ export const createReservation = createAsyncThunk(
         config,
       );
 
+      toast.success(data.message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+
       return data;
     } catch (error) {
+      const message = error.response ? error.response.data.message : error.message;
+      toast.error(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
       return rejectWithValue(error.message);
     }
   },
