@@ -12,6 +12,10 @@ html {
   display: flex;
 }
 
+.color-white {
+  color: white;
+}
+
 .home {
   flex: 1;
   min-height: calc(100vh - 60px);

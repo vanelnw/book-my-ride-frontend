@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import '../../assets/stylesheets/nav.css';
 import logo from '../../assets/images/logo.png';
 import { logout } from '../../redux/auth/authSlice';
 
 const TopNav = () => {
+  const navigate = useNavigate();
   const { isAuthenticated } = useSelector((state) => state.auth);
   // const isLoggedIn = localStorage.getItem('isLoggedIn');
   const data = JSON.parse(localStorage.getItem('user'));
@@ -14,6 +15,7 @@ const TopNav = () => {
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout());
+    navigate('/login');
   };
 
   return (
@@ -42,10 +44,10 @@ const TopNav = () => {
         ) : (
           <>
             <button type="button" className="button">
-              <NavLink to="/login" className="login">Login</NavLink>
+              <Link to="/login" className="login">Login</Link>
             </button>
             <button type="button" className="button">
-              <NavLink to="/register" className="signup">Register</NavLink>
+              <Link to="/register" className="signup">Register</Link>
             </button>
 
           </>

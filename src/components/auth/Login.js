@@ -32,7 +32,7 @@ function Login() {
     <div className="loginPage">
       <form onSubmit={handleLogin} className="form">
         <div className="top">
-          <span>
+          <span className="color-white">
             Don&apos;t have an account yet?&nbsp;
             <Link to="/register">Register Here</Link>
           </span>
@@ -60,17 +60,6 @@ function Login() {
         <button type="submit" className="submit" disabled={loading}>
           {loading ? 'Spinner' : 'Login'}
         </button>
-        <div className="two-col">
-          <div className="one">
-            <input type="checkbox" name="" id="check" />
-            <label htmlFor="check"> Remember Me</label>
-          </div>
-          <div className="two">
-            <label>
-              <a href="./LOGIN">Forgot password?</a>
-            </label>
-          </div>
-        </div>
       </form>
     </div>
   );
