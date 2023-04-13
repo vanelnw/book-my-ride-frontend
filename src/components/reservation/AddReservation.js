@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { createReservation } from '../../features/reservations/addReservationSlice';
-import './AddReservation.css';
+import { createReservation } from '../../redux/reservation/addReservationSlice';
+import '../../assets/stylesheets/AddReservation.css';
 
 const ReservationForm = () => {
   const reservation = useSelector((state) => state.addReservation.reservation);

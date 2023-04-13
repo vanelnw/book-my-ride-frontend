@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './Deletescreen.css';
-import { deleteCar, fetchItems } from '../../features/car/carActions';
-import { removeCar } from '../../features/car/carSlice';
+import '../../assets/stylesheets/Deletescreen.css';
+import { deleteCar, fetchItems } from '../../redux/car/carActions';
+import { removeCar } from '../../redux/car/carSlice';
 
 function DeleteScreen() {
   const { cars } = useSelector((state) => state.cars);

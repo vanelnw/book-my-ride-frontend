@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
-import { userLogin } from '../features/auth/authActions';
+import { userLogin } from '../../redux/auth/authActions';
 
 function Login() {
   const { loading, error, isAuthenticated } = useSelector(

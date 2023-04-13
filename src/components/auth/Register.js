@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { registerUser } from '../features/auth/authActions';
+import { registerUser } from '../../redux/auth/authActions';
 
 const RegisterScreen = () => {
   const { loading, userInfo, success } = useSelector((state) => state.auth);

@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { AiOutlineSetting, AiOutlineRightCircle } from 'react-icons/ai';
 import { BiChevronRight } from 'react-icons/bi';
-import circular from '../../assets/3LkGs.png';
-import './CarDetails.css';
-import { selectCarById } from '../../features/car/carSlice';
+import circular from '../../assets/images/3LkGs.png';
+import '../../assets/stylesheets/CarDetails.css';
+import { selectCarById } from '../../redux/car/carSlice';
 
 function CarDetails() {
   const { id } = useParams();

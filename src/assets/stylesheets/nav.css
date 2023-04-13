@@ -1,9 +1,5 @@
 /* Top Nav */
 .topnav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
