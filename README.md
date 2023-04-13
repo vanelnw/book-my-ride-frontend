@@ -39,9 +39,6 @@ Collaboration team is made of 3 members:
 
 Kanban can be found [here](https://github.com/users/vanelnw/projects/4/views/1)
 
-Final state of Kanban board 👇
-kanban final ![Uploading kanban final state.JPG…]()
-
 ## API Documentation <a name="api-documentation"></a>
 
 [Link to API Documentation](https://documenter.getpostman.com/view/24548009/2s93XsYS33)
