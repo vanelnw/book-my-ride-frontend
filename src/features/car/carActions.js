@@ -41,6 +41,8 @@ export const deleteCar = createAsyncThunk(
         },
       };
       const { data } = await axios.delete(
+        `${backendURL}/api/v1/cars/${id}`,
+        config,
         `${backendURL}/api/v1/cars/${id}`, config,
       );
 
@@ -55,6 +57,40 @@ export const deleteCar = createAsyncThunk(
         position: toast.POSITION.TOP_CENTER,
       });
       return rejectWithValue(message);
+    }
+  },
+);
+
+export const addCar = createAsyncThunk(
+  'car/addCar',
+  async (car, { rejectWithValue }) => {
+    try {
+      const config = {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      const { data } = await axios.post(
+        `${backendURL}/api/v1/cars/`,
+        car,
+        config,
+      );
+
+      toast.success(data.message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+
+      return data;
+    } catch (error) {
+      // return custom error message from backend if present
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
+      toast.error(message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return rejectWithValue(error.message);
     }
   },
 );
