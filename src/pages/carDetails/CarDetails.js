@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { AiOutlineSetting, AiOutlineRightCircle } from 'react-icons/ai';
 import { BiChevronRight } from 'react-icons/bi';
-import circular from '../../assets/3LkGs.png';
+// import { circular } from '../../assets';
 import './CarDetails.css';
 import { selectCarById } from '../../features/car/carSlice';
 
@@ -65,7 +65,7 @@ function CarDetails() {
           <BiChevronRight />
         </button>
 
-        <img src={circular} alt="colorPicker" className="colorPicker" />
+        {/* <img src={circular} alt="colorPicker" className="colorPicker" /> */}
 
         <button type="button" className="reserve-btn">
           <AiOutlineSetting />
