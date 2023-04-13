@@ -132,14 +132,6 @@ To run tests, run the following command:
   npm test
 ```
 
-### Deployment
-
-You can deploy this project using:
-
-```sh
-  git push heroku main
-```
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
