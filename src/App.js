@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCar from './components/car/AddCar';
 import Login from './components/auth/Login';
-import Home from './components/Home/Home';
+import Home from './components/home/Home';
 import RegisterScreen from './components/auth/Register';
 import Navbar from './components/nav/Navbar';
 import TopNav from './components/nav/Topbar';
