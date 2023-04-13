@@ -1,14 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerUser } from '../features/auth/authActions';
 
 const RegisterScreen = () => {
-  const {
-    loading, userInfo, success,
-  } = useSelector(
-    (state) => state.auth,
-  );
+  const { loading, userInfo, success } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
 
@@ -104,8 +101,11 @@ const RegisterScreen = () => {
           <div className="two-col">
             <div className="one">
               <p>Already have an account? </p>
-              <p><Link to="/login" className="whiteLink">Login Here</Link></p>
-
+              <p>
+                <Link to="/login" className="whiteLink">
+                  Login Here
+                </Link>
+              </p>
             </div>
           </div>
         </div>

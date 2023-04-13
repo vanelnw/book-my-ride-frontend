@@ -30,7 +30,9 @@ export const userLogin = createAsyncThunk(
       return data;
     } catch (error) {
       // return custom error message from API if any
-      const message = error.response ? error.response.data.message : error.message;
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });
@@ -60,8 +62,10 @@ export const registerUser = createAsyncThunk(
 
       return data;
     } catch (error) {
-    // return custom error message from backend if present
-      const message = error.response ? error.response.data.message : error.message;
+      // return custom error message from backend if present
+      const message = error.response
+        ? error.response.data.message
+        : error.message;
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });

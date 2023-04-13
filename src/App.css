@@ -29,8 +29,8 @@ html {
 
 .loginPage,
 .registerPage {
-  background-image: url("./assets/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg");
-  height: 90vh;
+  background-image: url('./assets/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -142,13 +142,129 @@ label a {
   font-weight: 700;
 }
 
+.my-reservations-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.reservation {
+  background-color: rgb(68, 197, 248);
+  width: 380px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.car-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.reserved-car-details > p {
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .my-reservations-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .reservation {
+    width: 200px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .car-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+  }
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 100%;
+  border-radius: 0.125rem;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 96%);
+  }
+}
+
+.loading-container {
+  height: 1000px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  margin: 200px auto;
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgba(7, 148, 235, 0.2);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  margin-top: -150px;
+  color: #060606;
+}
+
 .carContainer {
   width: 30%;
   height: auto;
   min-width: 400px;
 }
 
-.carContainer > img {
+/* .carContainer > img {
   width: 100%;
   height: 100%;
-}
+} */

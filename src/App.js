@@ -12,6 +12,7 @@ import Navbar from './components/nav/Navbar';
 import TopNav from './components/nav/Topbar';
 import CarDetails from './pages/carDetails/CarDetails';
 import DeleteScreen from './pages/delete/DeleteScreen';
+import ReservationList from './components/ReservationList';
 
 function App() {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -19,26 +20,28 @@ function App() {
   return (
     <div className="App">
       <div className="">
-
         <Router>
           <TopNav />
           <div className="d-flex">
-            {isAuthenticated && <Navbar /> }
+            {isAuthenticated && <Navbar />}
             <div className={isAuthenticated ? 'home' : 'home full'}>
               <ToastContainer />
               <Routes>
-                <Route path="/" element={!isAuthenticated ? <Login /> : <Home />} />
+                <Route
+                  path="/"
+                  element={!isAuthenticated ? <Login /> : <Home />}
+                />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
+                <Route path="/reservationList" element={<ReservationList />} />
               </Routes>
             </div>
           </div>
         </Router>
       </div>
     </div>
-
   );
 }
 
