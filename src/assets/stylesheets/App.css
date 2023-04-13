@@ -151,8 +151,13 @@ label a {
   gap: 40px;
 }
 
+.my-reservations-container > .heading {
+  width: 100%;
+  text-align: center;
+}
+
 .reservation {
-  background-color: rgb(68, 197, 248);
+  background-color: #e5e7cf;
   width: 380px;
   height: 200px;
   border: 1px solid black;

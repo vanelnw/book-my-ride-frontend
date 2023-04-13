@@ -30,6 +30,7 @@ const ReservationList = () => {
 
   return (
     <div className="my-reservations-container">
+      <div className="heading"><h1>My Reservations</h1></div>
       {items.map((item) => (
         <div className="reservation" key={item.id}>
           <div className="image-container skeleton">

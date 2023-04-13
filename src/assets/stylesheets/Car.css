@@ -15,7 +15,7 @@ html {
   /* position: absolute; */
 }
 
-.addForm{
+.addForm {
   background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -27,39 +27,39 @@ html {
 
 .innercontainer {
   background-color: rgba(151, 191, 14, 0.3);
+
   /* width: 40vw; */
   height: 90vh;
 
   /* margin-top: 50px; */
   padding-top: 30px;
   border-radius: 8px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-form {
+.add-form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: auto;
 }
 
-label {
+.add-form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-label > span {
+.add-form-field > span {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-input[type="text"],
+.addInput,
 textarea,
 input[type="file"] {
   padding: 0.5rem;
