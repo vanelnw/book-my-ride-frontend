@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addCar } from '../../features/car/carActions';
-import './Car.css';
+import { addCar } from '../../redux/car/carActions';
+import '../../assets/stylesheets/Car.css';
 
 const AddCar = () => {
   const dispatch = useDispatch();
@@ -87,7 +87,7 @@ const AddCar = () => {
           />
         </label>
 
-        <button type="submit">Add Car</button>
+        <button type="submit" className="btn-add-car">Add Car</button>
       </form>
     </div>
   );

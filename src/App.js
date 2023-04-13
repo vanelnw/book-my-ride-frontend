@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
-import AddCar from './components/Addcar/AddCar';
+import AddCar from './components/car/AddCar';
 import Login from './components/auth/Login';
 import Home from './components/home/Home';
 import RegisterScreen from './components/auth/Register';
