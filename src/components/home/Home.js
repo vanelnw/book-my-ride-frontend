@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import './Home.css';
-import { fetchItems } from '../features/car/carActions';
+import '../../assets/stylesheets/Home.css';
+import { fetchItems } from '../../redux/car/carActions';
 
 const Home = () => {
   const dispatch = useDispatch();

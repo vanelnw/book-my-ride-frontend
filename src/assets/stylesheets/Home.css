@@ -57,6 +57,7 @@
 .btn-details {
   display: inline-block;
   background-color: #007bff;
+  background-color: #97bf0e;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -95,6 +96,6 @@
 
 @media screen and (max-width: 600px) {
   .home {
-    margin-left: 10px;
+    /* margin-left: 10px; */
   }
 }

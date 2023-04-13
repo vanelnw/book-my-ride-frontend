@@ -6,9 +6,9 @@
   justify-content: center;
 
   /* width: 75vw; */
-  height: 100vh;
+  height: 100%;
   gap: 30px;
-  padding: 20px;
+  padding: 0 10px;
 }
 
 .title {
@@ -116,7 +116,7 @@ svg {
   padding: 0 20px;
   outline: none;
   color: rgb(249, 249, 249);
-  background: rgb(122, 232, 78);
+  background: #97bf0e;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
@@ -135,8 +135,9 @@ svg {
     flex-wrap: nowrap;
     flex: 1;
     padding: 0;
-    padding-right: 30px;
+    padding: 0 30px;
     height: 100%;
+    background-color: rgba(213, 210, 210, 0.2);
   }
 
   .img-container {

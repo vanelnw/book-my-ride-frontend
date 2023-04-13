@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import './nav.css';
-import logo from '../../assets/logo.png';
-import { logout } from '../../features/auth/authSlice';
+import '../../assets/stylesheets/nav.css';
+import logo from '../../assets/images/logo.png';
+import { logout } from '../../redux/auth/authSlice';
 
 const TopNav = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);

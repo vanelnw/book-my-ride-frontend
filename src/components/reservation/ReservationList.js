@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchItems } from '../redux/reservationsList/reservationsListSlice';
+import { fetchItems } from '../../redux/reservation/reservationsListSlice';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
