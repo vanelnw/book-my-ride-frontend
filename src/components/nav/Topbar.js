@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import '../../assets/stylesheets/nav.css';
 import logo from '../../assets/images/logo.png';
@@ -38,17 +38,24 @@ const TopNav = () => {
               {data.email}
             </span>
             <button type="button" className="button" onClick={handleLogout}>
-              Logout
+              <Link to="/login" className="login">
+                Logout
+              </Link>
+
             </button>
           </div>
         ) : (
           <>
-            <button type="button" className="button">
-              <Link to="/login" className="login">Login</Link>
-            </button>
-            <button type="button" className="button">
-              <Link to="/register" className="signup">Register</Link>
-            </button>
+            <Link to="/login" className="login">
+              <button type="button" className="button">
+                Login
+              </button>
+            </Link>
+            <NavLink to="/register" className="signup">
+              <button type="button" className="button">
+                Register
+              </button>
+            </NavLink>
 
           </>
         )
