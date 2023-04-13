@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import './assets/stylesheets/App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Routes, Route,
+} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
@@ -35,12 +38,12 @@ function App() {
                 />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<RegisterScreen />} />
-                <Route path="/car/:id" element={<CarDetails />} />
-                <Route path="/delete" element={<DeleteScreen />} />
-                <Route path="/addReservation" element={<AddReservation />} />
-                <Route path="/addReservation/:id" element={<AddReservation />} />
-                <Route path="/addCar" element={<AddCar />} />
-                <Route path="/reservationList" element={<ReservationList />} />
+                <Route path="/car/:id" element={!isAuthenticated ? <Login /> : <CarDetails />} />
+                <Route path="/addReservation" element={!isAuthenticated ? <Login /> : <AddReservation />} />
+                <Route path="/addReservation/:id" element={!isAuthenticated ? <Login /> : <AddReservation />} />
+                <Route path="/addCar" element={!isAuthenticated ? <Login /> : <AddCar />} />
+                <Route path="/reservationList" element={!isAuthenticated ? <Login /> : <ReservationList />} />
+                <Route path="/delete" element={!isAuthenticated ? <Login /> : <DeleteScreen />} />
               </Routes>
             </div>
           </div>
