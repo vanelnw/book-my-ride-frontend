@@ -54,30 +54,41 @@
 }
 
 .add-heading {
-  border-bottom: 1px solid white;
-  padding: 5px;
-  width: 100%;
+  border-bottom: 2px solid white;
+  width: 350px;
+  padding: 10px 0;
 }
 
 .add-heading h2 {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.5em;
+  width: 350px;
 }
 
 .add-reservation-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 350px;
   gap: 20px;
+  margin-top: 20px;
+}
+
+.reservation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: medium;
+  font-weight: 600;
+  color: #fff;
 }
 
 input {
   background-color: transparent;
   outline: none;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50px;
   padding: 10px;
 }
@@ -94,24 +105,18 @@ select {
   border: 1px solid rgb(95, 237, 13);
   border-radius: 50px;
   padding: 10px;
-  color: rgb(95, 237, 13);
+  color: rgb(60, 144, 12);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
-.reservation-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .book-btn {
   background-color: white;
-  color: rgb(95, 237, 13);
+  color: rgb(60, 144, 12);
   border-radius: 50px;
-  border: 1px solid white;
+  border: 2px solid white;
   outline: none;
   padding: 10px;
   font-weight: bold;

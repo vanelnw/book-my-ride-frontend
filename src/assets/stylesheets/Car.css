@@ -40,26 +40,26 @@ html {
   align-items: center;
 }
 
-form {
+.add-form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   margin: auto;
 }
 
-label {
+.add-form-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
 
-label > span {
+.add-form-field > span {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-input[type="text"],
+.addInput,
 textarea,
 input[type="file"] {
   padding: 0.5rem;
