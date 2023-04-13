@@ -1,3 +1,8 @@
+/* styles here */
+
+div{
+  width: 100%;
+}
 .car-details {
   /* margin-left: 20%; */
   display: flex;
