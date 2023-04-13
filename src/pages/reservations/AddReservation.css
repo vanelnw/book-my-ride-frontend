@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(19, 194, 51, 0.9);
+  background: rgba(95, 237, 13, 0.9);
 }
 
 .message {
@@ -79,10 +79,10 @@ input[type="text"] {
 select {
   background-color: white;
   outline: none;
-  border: 1px solid rgba(19, 194, 51, 0.9);
+  border: 1px solid rgb(95, 237, 13);
   border-radius: 50px;
   padding: 10px;
-  color: rgba(19, 194, 51, 0.9);
+  color: rgb(95, 237, 13);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -97,7 +97,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .book-btn {
   background-color: white;
-  color: rgba(19, 194, 51, 0.9);
+  color: rgb(95, 237, 13);
   border-radius: 50px;
   border: 1px solid white;
   outline: none;
