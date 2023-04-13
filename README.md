@@ -25,7 +25,7 @@
 
 # 📖 Exotic Rentals APP <a name="about-project"></a>
 
-**Rental a Car** is a a car rental application. It allows users to create an account, login, and book a car for a specific period of time. It also allows users to view all available cars, and view a specific car. It also allows users to view all bookings made by a specific user.
+**Rental a Car** is a car rental application that provides users with the ability to create an account, log in, and reserve a car for a designated time frame. It also allows users to browse through all available vehicles and view specific cars. Additionally, users can check their own booking history and view all reservations made by them.
 
 ## Kanban Board <a name="kanban-board"></a>
 
