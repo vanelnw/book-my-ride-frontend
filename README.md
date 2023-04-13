@@ -112,7 +112,7 @@ Clone this repository to your desired folder:
 ### Install
 
 ```sh
-  cd car-rental-app
+  cd appointment-capstone-frontend
   npm install
 ```
 
