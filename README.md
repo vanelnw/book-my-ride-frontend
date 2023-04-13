@@ -39,7 +39,8 @@ Collaboration team is made of 3 members:
 
 Kanban can be found [here](https://github.com/users/vanelnw/projects/4/views/1)
 
-Initial state of Kanban board 👇
+Final state of Kanban board 👇
+kanban final state.JPG
 
 ## API Documentation <a name="api-documentation"></a>
 
@@ -112,7 +113,7 @@ Clone this repository to your desired folder:
 ### Install
 
 ```sh
-  cd car-rental-app
+  cd appointment-capstone-frontend
   npm install
 ```
 
@@ -130,14 +131,6 @@ To run tests, run the following command:
 
 ```sh
   npm test
-```
-
-### Deployment
-
-You can deploy this project using:
-
-```sh
-  git push heroku main
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
