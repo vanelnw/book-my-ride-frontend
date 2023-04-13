@@ -34,6 +34,7 @@ function App() {
                 <Route path="/car/:id" element={<CarDetails />} />
                 <Route path="/delete" element={<DeleteScreen />} />
                 <Route path="/addReservation" element={<AddReservation />} />
+                <Route path="/addReservation/:id" element={<AddReservation />} />
               </Routes>
             </div>
           </div>

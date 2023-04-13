@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { AiOutlineSetting, AiOutlineRightCircle } from 'react-icons/ai';
 import { BiChevronRight } from 'react-icons/bi';
 import circular from '../../assets/3LkGs.png';
@@ -11,11 +11,6 @@ import { selectCarById } from '../../features/car/carSlice';
 function CarDetails() {
   const { id } = useParams();
   const car = useSelector((state) => selectCarById(state, parseInt(id, 10)));
-  const navigate = useNavigate();
-
-  const addReservation = () => {
-    navigate('/addReservation', { state: { car } });
-  };
 
   return (
     <div className="car-details">
@@ -72,14 +67,16 @@ function CarDetails() {
 
         <img src={circular} alt="colorPicker" className="colorPicker" />
 
-        <button type="button" className="reserve-btn" onClick={() => addReservation()}>
-          <AiOutlineSetting />
-          {' '}
-          Reserve
-          {' '}
-          <AiOutlineRightCircle />
-          {' '}
-        </button>
+        <Link to={`/addReservation/${car.id}`} className="btn-details">
+          <button type="button" className="reserve-btn">
+            <AiOutlineSetting />
+            {' '}
+            Reserve
+            {' '}
+            <AiOutlineRightCircle />
+            {' '}
+          </button>
+        </Link>
       </div>
     </div>
   );

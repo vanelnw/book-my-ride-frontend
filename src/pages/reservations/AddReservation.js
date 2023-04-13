@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { createReservation } from '../../features/reservations/addReservationSlice';
 import './AddReservation.css';
 
 const ReservationForm = () => {
-  const location = useLocation();
-  const car = location?.state?.car;
+  const reservation = useSelector((state) => state.addReservation.reservation);
+  const { cars } = useSelector((state) => state.cars);
+  const { id } = useParams();
+
+  const car = cars.find((car) => car.id === +id);
+
+  const { message, success } = reservation;
   const user = localStorage.getItem('user');
   const [reservationData, setReservationData] = useState({
     reservationDate: '',
     dueDate: '',
-    carId: car.id,
+    carId: car?.id || null,
   });
 
   const dispatch = useDispatch();
-  const reservation = useSelector((state) => state.addReservation.reservation);
-  const { message, success } = reservation;
-
-  // const cars = useSelector((state) => state.car.cars);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,21 +41,33 @@ const ReservationForm = () => {
               id="username"
               name="username"
               defaultValue={JSON.parse(user).name}
-              readOnly
               required
             />
           </label>
           <label htmlFor="carName" className="reservation-item">
             Car Name:
-            <input
-              type="text"
-              id="carName"
-              name="carName"
-              defaultValue={`${car.make} ${car.model}`}
-              readOnly
+            <select
+              defaultValue={car?.id === undefined ? '' : car?.id}
+              onChange={(e) => setReservationData({
+                ...reservationData,
+                carId: e.target.value,
+              })}
               required
-            />
+            >
+              <option value="">Select</option>
+              {
+                cars?.map((c) => (
+                  <option
+                    value={c?.id}
+                    key={c?.id}
+                  >
+                    {c.make}
+                  </option>
+                ))
+              }
+            </select>
           </label>
+
           <label htmlFor="reservationDate" className="reservation-item">
             Select Start Date:
             <input
