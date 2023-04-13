@@ -2,9 +2,10 @@
 import React from 'react';
 import './assets/stylesheets/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
+import { useSelector } from 'react-redux';
 import 'react-toastify/dist/ReactToastify.css';
+import AddCar from './components/Addcar/AddCar';
 import Login from './components/auth/Login';
 import Home from './components/home/Home';
 import RegisterScreen from './components/auth/Register';
@@ -38,6 +39,7 @@ function App() {
                 <Route path="/delete" element={<DeleteScreen />} />
                 <Route path="/addReservation" element={<AddReservation />} />
                 <Route path="/addReservation/:id" element={<AddReservation />} />
+                <Route path="/addCar" element={<AddCar />} />
                 <Route path="/reservationList" element={<ReservationList />} />
               </Routes>
             </div>
