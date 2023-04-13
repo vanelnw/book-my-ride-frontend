@@ -228,9 +228,9 @@ a {
     align-items: center;
   }
 
-  .btn-light:hover{
-      background-color: #97bf0e;
-      padding: 10px;
+  .btn-light:hover {
+    background-color: #97bf0e;
+    padding: 10px;
   }
 
   .socialmedia {
