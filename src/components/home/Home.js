@@ -42,9 +42,14 @@ const Home = () => {
             <img className="car-img" src={item.image} alt="car" />
             <div className="car-det">
               <h2>
-                {item.make} {item.model}
+                {item.make}
+                {' '}
+                {item.model}
               </h2>
-              <p className="price">${item.daily_rate}</p>
+              <p className="price">
+                $
+                {item.daily_rate}
+              </p>
 
               <Link to={`/car/${item.id}`} className="btn-details">
                 View Details
