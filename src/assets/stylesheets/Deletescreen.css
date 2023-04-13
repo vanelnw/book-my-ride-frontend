@@ -40,6 +40,12 @@
   border-radius: 50%;
 }
 
+.car-Container > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
 .description p {
   color: black;
   text-align: left;
@@ -49,12 +55,6 @@
   white-space: nowrap;
   word-wrap: break-word;
   overflow: hidden;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
 }
 
 .delete-item button {

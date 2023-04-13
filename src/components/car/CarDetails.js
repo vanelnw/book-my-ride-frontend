@@ -19,7 +19,7 @@ function CarDetails() {
       </div>
       <div className="details-infos">
         <div className="title">
-          <h2>{car.make}</h2>
+          <h1>{car.make}</h1>
           <p>
             $350 deposit upon any
             {' '}

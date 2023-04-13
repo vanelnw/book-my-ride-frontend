@@ -29,8 +29,9 @@ const AddCar = () => {
     <div className="addForm">
 
       <div className="innercontainer">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="make">
+        <div className="add-heading"><h2>Add a new car</h2></div>
+        <form onSubmit={handleSubmit} className="add-form">
+          <label htmlFor="make" className="add-form-field">
             Make:
             <input
               className="addInput"
@@ -41,7 +42,7 @@ const AddCar = () => {
             />
           </label>
 
-          <label htmlFor="model">
+          <label htmlFor="model" className="add-form-field">
             Model:
             <input
               className="addInput"
@@ -52,7 +53,7 @@ const AddCar = () => {
             />
           </label>
 
-          <label htmlFor="year">
+          <label htmlFor="year" className="add-form-field">
             Year:
             <input
               className="addInput"
@@ -63,7 +64,7 @@ const AddCar = () => {
             />
           </label>
 
-          <label htmlFor="image">
+          <label htmlFor="image" className="add-form-field">
             Image:
             <input
               type="file"
@@ -73,7 +74,7 @@ const AddCar = () => {
             />
           </label>
 
-          <label htmlFor="description">
+          <label htmlFor="description" className="add-form-field">
             Description:
             <textarea
               id="description"
@@ -82,7 +83,7 @@ const AddCar = () => {
             />
           </label>
 
-          <label htmlFor="daily-rate">
+          <label htmlFor="daily-rate" className="add-form-field">
             Daily Rate:
             <input
               type="number"

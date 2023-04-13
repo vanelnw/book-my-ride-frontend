@@ -28,7 +28,7 @@ p {
 }
 
 .img-container {
-  width: 80%;
+  width: 75%;
   height: auto;
   min-width: 310px;
 }
@@ -36,6 +36,7 @@ p {
 .img-container > img {
   width: 100%;
   height: 100%;
+  border-radius: 30px;
 }
 
 .details-infos {
@@ -57,7 +58,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 10px;
   border-radius: 3px;
   font-weight: 600;
   font-size: 12px;
@@ -135,7 +136,7 @@ svg {
     flex-wrap: nowrap;
     flex: 1;
     padding: 0;
-    padding: 0 30px;
+    padding: 0 20px;
     height: 100%;
     background-color: rgba(213, 210, 210, 0.2);
   }
