@@ -52,6 +52,7 @@ const ReservationForm = () => {
                 ...reservationData,
                 carId: e.target.value,
               })}
+              className="custom-select"
               required
             >
               <option value="">Select</option>
@@ -61,7 +62,7 @@ const ReservationForm = () => {
                     value={c?.id}
                     key={c?.id}
                   >
-                    {c.make}
+                    {`${c.make} ${c.model}`}
                   </option>
                 ))
               }
