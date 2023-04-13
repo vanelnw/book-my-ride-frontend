@@ -2,7 +2,6 @@
   background-image: url('../images//audi-audi-rs5-coupe-car-wallpaper-preview.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
   height: 100vh;
   color: white;
 }
@@ -13,7 +12,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(95, 237, 13, 0.9);
 }
 

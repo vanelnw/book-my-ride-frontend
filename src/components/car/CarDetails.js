@@ -30,17 +30,19 @@ function CarDetails() {
         </div>
         <div className="fees">
           <div className="fee">
-            Model
+            Model:
             {' '}
             <span>{car.model}</span>
           </div>
           <div className="fee">
-            Description
+            Description:
             {' '}
-            <span>{car.description}</span>
+            {car.description.length > 40
+              ? `${car.description.substring(0, 40)}...`
+              : car.description}
           </div>
           <div className="fee">
-            Daily Rate
+            Daily Rate:
             {' '}
             <span>
               $
@@ -48,7 +50,7 @@ function CarDetails() {
             </span>
           </div>
           <div className="fee">
-            Year
+            Year:
             {' '}
             <span>{car.year}</span>
           </div>
