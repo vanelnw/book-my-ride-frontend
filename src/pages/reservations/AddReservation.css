@@ -19,13 +19,11 @@
 
 .message {
   font-weight: bold;
-  background-color: white;
   text-align: center;
-  padding: 0 5px;
 }
 
 .success {
-  color: green;
+  color: white;
 }
 
 .error {
