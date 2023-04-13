@@ -43,7 +43,7 @@ Initial state of Kanban board 👇
 
 ## API Documentation <a name="api-documentation"></a>
 
-[Link to API Documentation]()
+[Link to API Documentation](https://documenter.getpostman.com/view/24548009/2s93XsYS33)
 
 ## Backend <a name="backend"></a>
 
