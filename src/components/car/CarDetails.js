@@ -1,12 +1,12 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { AiOutlineSetting, AiOutlineRightCircle } from 'react-icons/ai';
 import { BiChevronRight } from 'react-icons/bi';
-import circular from '../../assets/3LkGs.png';
-import './CarDetails.css';
-import { selectCarById } from '../../features/car/carSlice';
+import circular from '../../assets/images/3LkGs.png';
+import '../../assets/stylesheets/CarDetails.css';
+import { selectCarById } from '../../redux/car/carSlice';
 
 function CarDetails() {
   const { id } = useParams();
@@ -19,7 +19,7 @@ function CarDetails() {
       </div>
       <div className="details-infos">
         <div className="title">
-          <h2>{car.make}</h2>
+          <h1>{car.make}</h1>
           <p>
             $350 deposit upon any
             {' '}
@@ -30,17 +30,22 @@ function CarDetails() {
         </div>
         <div className="fees">
           <div className="fee">
-            Model
+            Model:
             {' '}
             <span>{car.model}</span>
           </div>
           <div className="fee">
-            Description
+            Description:
             {' '}
-            <span>{car.description}</span>
+            <span>
+              {car.description.length > 40
+                ? `${car.description.substring(0, 40)}...`
+                : car.description}
+            </span>
+
           </div>
           <div className="fee">
-            Daily Rate
+            Daily Rate:
             {' '}
             <span>
               $
@@ -48,7 +53,7 @@ function CarDetails() {
             </span>
           </div>
           <div className="fee">
-            Year
+            Year:
             {' '}
             <span>{car.year}</span>
           </div>
@@ -59,22 +64,26 @@ function CarDetails() {
           <span style={{ color: 'black' }}> Representative</span>
         </div>
 
-        <button type="button" className="more-btn">
-          DISCOVER MORE MODELS
-          {' '}
-          <BiChevronRight />
-        </button>
+        <Link to="/" className="">
+          <button type="button" className="more-btn">
+            DISCOVER MORE MODELS
+            {' '}
+            <BiChevronRight />
+          </button>
+        </Link>
 
         <img src={circular} alt="colorPicker" className="colorPicker" />
 
-        <button type="button" className="reserve-btn">
-          <AiOutlineSetting />
-          {' '}
-          Reserve
-          {' '}
-          <AiOutlineRightCircle />
-          {' '}
-        </button>
+        <Link to={`/addReservation/${car.id}`} className="">
+          <button type="button" className="reserve-btn">
+            <AiOutlineSetting />
+            {' '}
+            Reserve
+            {' '}
+            <AiOutlineRightCircle />
+            {' '}
+          </button>
+        </Link>
       </div>
     </div>
   );

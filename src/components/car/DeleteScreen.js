@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './Deletescreen.css';
-import { deleteCar, fetchItems } from '../../features/car/carActions';
-import { removeCar } from '../../features/car/carSlice';
+import '../../assets/stylesheets/Deletescreen.css';
+import { deleteCar, fetchItems } from '../../redux/car/carActions';
+import { removeCar } from '../../redux/car/carSlice';
 
 function DeleteScreen() {
   const { cars } = useSelector((state) => state.cars);
@@ -27,9 +27,23 @@ function DeleteScreen() {
             <div className="car-Container">
               <img src={car.image} alt="car" />
             </div>
-            <p>{car.make}</p>
-            <p>{car.model}</p>
-            <p>{car.daily_rate}</p>
+            <div className="description">
+
+              <strong>
+                {car.make}
+                {' '}
+                {car.model}
+              </strong>
+              <p>
+                {' '}
+                {car.description.length > 200
+                  ? `${car.description.substring(0, 40)}...`
+                  : car.description}
+              </p>
+
+            </div>
+
+            <span>{car.daily_rate}</span>
             {' '}
             <button type="button" onClick={() => handleDeleteItem(car.id)}>
               Delete

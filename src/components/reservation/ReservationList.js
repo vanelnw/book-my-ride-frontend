@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchItems } from '../redux/reservationsList/reservationsListSlice';
+import { fetchItems } from '../../redux/reservation/reservationsListSlice';
 
 const ReservationList = () => {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const ReservationList = () => {
 
   return (
     <div className="my-reservations-container">
+      <div className="heading"><h1>My Reservations</h1></div>
       {items.map((item) => (
         <div className="reservation" key={item.id}>
           <div className="image-container skeleton">
