@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
@@ -22,11 +21,12 @@ export const createReservation = createAsyncThunk(
           car_id: carId,
         },
       };
-      const { data } = await axios.post(
-        `${backendURL}/api/v1/reservations/`,
-        reservationData,
-        config,
-      );
+      const response = await fetch(`${backendURL}/api/v1/reservations/`, {
+        method: 'POST',
+        headers: config.headers,
+        body: JSON.stringify(reservationData),
+      });
+      const data = await response.json();
 
       toast.success(data.message, {
         position: toast.POSITION.TOP_CENTER,
@@ -48,6 +48,7 @@ const initialState = { loading: false, reservation: '', error: '' };
 const addReservationSlice = createSlice({
   name: 'addReservation',
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(createReservation.pending, (state) => {
       const newState = { ...state, loading: true };

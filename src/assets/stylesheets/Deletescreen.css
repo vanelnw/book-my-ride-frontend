@@ -1,7 +1,7 @@
 .deleteContainer {
   flex: 1;
   background-image: url("../images/audi-auto-vehicle-sports-car.jpeg");
-  height: calc(100vh - 90px);
+  min-height: calc(100vh - 90px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
