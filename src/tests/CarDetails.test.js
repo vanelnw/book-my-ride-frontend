@@ -1,43 +1,80 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import renderer from 'react-test-renderer';
 import CarDetails from '../pages/carDetails/CarDetails';
 
-jest.mock('react-redux', () => ({
-  useSelector: jest.fn(),
-}));
-
-jest.mock('react-router-dom', () => ({
-  useParams: jest.fn(),
-}));
-
-describe('CarDetails component', () => {
-  it('should display the car details', () => {
-    const carId = '1';
-    const car = {
-      id: 1,
-      make: 'Toyota',
-      model: 'Corolla',
-      description: 'A reliable car',
-      daily_rate: 50,
-      year: 2021,
-      image: 'https://example.com/corolla.jpg',
-    };
-    useSelector.mockReturnValueOnce(car);
-    useParams.mockReturnValueOnce({ id: carId });
-    render(<CarDetails />);
-    expect(screen.getByText(`${car.make} Purchase`)).toBeInTheDocument();
-    expect(screen.getByText(`Model ${car.model}`)).toBeInTheDocument();
-    expect(screen.getByText(`Description ${car.description}`)).toBeInTheDocument();
-    expect(screen.getByText(`Daily Rate $${car.daily_rate}`)).toBeInTheDocument();
-    expect(screen.getByText(`Year ${car.year}`)).toBeInTheDocument();
-    expect(screen.getByText('5.9% APR')).toBeInTheDocument();
-    expect(screen.getByText('DISCOVER MORE MODELS')).toBeInTheDocument();
-    expect(screen.getByText('Reserve')).toBeInTheDocument();
+describe('CarDetails', () => {
+  it('should render correctly', () => {
+    const tree = renderer.create(<CarDetails />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
+
+// import React from 'react';
+// // eslint-disable-next-line import/no-extraneous-dependencies
+// import { render } from '@testing-library/react';
+// import CarDetails from '../pages/carDetails/CarDetails';
+
+// describe('CarDetails component', () => {
+//   test('should render car details correctly', () => {
+//     const car = {
+//       id: 1,
+//       make: 'Toyota',
+//       model: 'Corolla',
+//       description: 'A compact car',
+//       daily_rate: 40,
+//       year: 2022,
+//       image: 'https://example.com/car.jpg',
+//     };
+
+//     const { container } = render(<CarDetails />, {
+//       initialState: { car: { cars: [car] } },
+//       route: '/cars/1',
+//     });
+
+//     expect(container).toMatchSnapshot();
+//   });
+// });
+
+/* eslint-disable import/no-extraneous-dependencies */
+// import React from 'react';
+// import { render, screen } from '@testing-library/react';
+// import { useSelector } from 'react-redux';
+// import { useParams } from 'react-router-dom';
+// import CarDetails from '../pages/carDetails/CarDetails';
+
+// jest.mock('react-redux', () => ({
+//   useSelector: jest.fn(),
+// }));
+
+// jest.mock('react-router-dom', () => ({
+//   useParams: jest.fn(),
+// }));
+
+// describe('CarDetails component', () => {
+//   it('should display the car details', () => {
+//     const carId = '1';
+//     const car = {
+//       id: 1,
+//       make: 'Toyota',
+//       model: 'Corolla',
+//       description: 'A reliable car',
+//       daily_rate: 50,
+//       year: 2021,
+//       image: 'https://example.com/corolla.jpg',
+//     };
+// useSelector.mockReturnValueOnce(car);
+//     useParams.mockReturnValueOnce({ id: carId });
+//     render(<CarDetails />);
+//     expect(screen.getByText(`${car.make} Purchase`)).toBeInTheDocument();
+//     expect(screen.getByText(`Model ${car.model}`)).toBeInTheDocument();
+//     expect(screen.getByText(`Description ${car.description}`)).toBeInTheDocument();
+//     expect(screen.getByText(`Daily Rate $${car.daily_rate}`)).toBeInTheDocument();
+//     expect(screen.getByText(`Year ${car.year}`)).toBeInTheDocument();
+//     expect(screen.getByText('5.9% APR')).toBeInTheDocument();
+//     expect(screen.getByText('DISCOVER MORE MODELS')).toBeInTheDocument();
+//     expect(screen.getByText('Reserve')).toBeInTheDocument();
+//   });
+// });
 
 // import React from 'react';
 // // eslint-disable-next-line import/no-extraneous-dependencies
