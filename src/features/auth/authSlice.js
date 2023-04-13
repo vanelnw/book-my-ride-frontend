@@ -32,7 +32,6 @@ const authSlice = createSlice({
     },
   },
   extraReducers: {
-
     // log in user
     [userLogin.pending]: (state) => {
       state.loading = true;
@@ -64,9 +63,7 @@ const authSlice = createSlice({
       state.loading = false;
       state.error = payload;
     },
-
   },
-
 });
 
 export const { logout } = authSlice.actions;
