@@ -10,11 +10,7 @@
 
 .innercontainer {
   background-color: rgba(151, 191, 14, 0.3);
-
-  /* width: 40vw; */
   height: 90vh;
-
-  /* margin-top: 50px; */
   padding-top: 30px;
   border-radius: 8px;
   display: flex;
@@ -50,10 +46,6 @@ input[type='file'] {
   border: 2px solid #ccc;
   font-size: 1rem;
 }
-
-/* .addInput{
-  width: 100% !important;
-} */
 
 .btn-add-car {
   background-color: #97bf0e;
