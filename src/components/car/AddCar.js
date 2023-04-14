@@ -56,6 +56,7 @@ const AddCar = () => {
             id="year"
             value={year}
             onChange={(e) => setYear(e.target.value)}
+            placeholder="Year"
           />
 
           <input
@@ -63,12 +64,14 @@ const AddCar = () => {
             id="image"
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            placeholder="Image-url"
           />
 
           <textarea
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            placeholder="Descriptions"
           />
 
           <input
@@ -76,6 +79,7 @@ const AddCar = () => {
             id="daily-rate"
             value={dailyRate}
             onChange={(e) => setDailyRate(e.target.value)}
+            placeholder="Daily Rate"
           />
 
           <button type="submit" className="btn-add-car">
