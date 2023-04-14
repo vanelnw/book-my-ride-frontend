@@ -47,6 +47,7 @@ const AddCar = () => {
             id="model"
             value={model}
             onChange={(e) => setModel(e.target.value)}
+            placeholder="Model"
           />
 
           <label htmlFor="year" className="add-form-field">
