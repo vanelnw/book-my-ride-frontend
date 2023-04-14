@@ -50,45 +50,33 @@ const AddCar = () => {
             placeholder="Model"
           />
 
-          <label htmlFor="year" className="add-form-field">
-            Year:
-            <input
-              className="addInput"
-              type="text"
-              id="year"
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-            />
-          </label>
+          <input
+            className="addInput"
+            type="text"
+            id="year"
+            value={year}
+            onChange={(e) => setYear(e.target.value)}
+          />
 
-          <label htmlFor="image" className="add-form-field">
-            Image:
-            <input
-              type="text"
-              id="image"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-            />
-          </label>
+          <input
+            type="text"
+            id="image"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
 
-          <label htmlFor="description" className="add-form-field">
-            Description:
-            <textarea
-              id="description"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-          </label>
+          <textarea
+            id="description"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
 
-          <label htmlFor="daily-rate" className="add-form-field">
-            Daily Rate:
-            <input
-              type="number"
-              id="daily-rate"
-              value={dailyRate}
-              onChange={(e) => setDailyRate(e.target.value)}
-            />
-          </label>
+          <input
+            type="number"
+            id="daily-rate"
+            value={dailyRate}
+            onChange={(e) => setDailyRate(e.target.value)}
+          />
 
           <button type="submit" className="btn-add-car">
             Add Car
