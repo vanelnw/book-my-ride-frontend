@@ -38,18 +38,16 @@ const AddCar = () => {
             id="make"
             value={make}
             onChange={(e) => setMake(e.target.value)}
+            placeholder="Make"
           />
 
-          <label htmlFor="model" className="add-form-field">
-            Model:
-            <input
-              className="addInput"
-              type="text"
-              id="model"
-              value={model}
-              onChange={(e) => setModel(e.target.value)}
-            />
-          </label>
+          <input
+            className="addInput"
+            type="text"
+            id="model"
+            value={model}
+            onChange={(e) => setModel(e.target.value)}
+          />
 
           <label htmlFor="year" className="add-form-field">
             Year:
