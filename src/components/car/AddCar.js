@@ -67,7 +67,7 @@ const AddCar = () => {
           <label htmlFor="image" className="add-form-field">
             Image:
             <input
-              type="file"
+              type="text"
               id="image"
               value={image}
               onChange={(e) => setImage(e.target.value)}
