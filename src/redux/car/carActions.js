@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 import { toast } from 'react-toastify';
 
@@ -35,24 +34,28 @@ export const deleteCar = createAsyncThunk(
   async ({ id }, { rejectWithValue }) => {
     try {
       const config = {
+        method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
       };
-      const { data } = await axios.delete(
-        `${backendURL}/api/v1/cars/${id}`,
-        config,
-        `${backendURL}/api/v1/cars/${id}`, config,
-      );
+
+      const response = await fetch(`${backendURL}/api/v1/cars/${id}`, config);
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Failed to delete car.');
+      }
 
       toast.success(data.message, {
         position: toast.POSITION.TOP_CENTER,
       });
+
       return data;
     } catch (error) {
-      // return custom error message from API if any
-      const message = error.response ? error.response.data.message : error.message;
+      const message = error.message || 'Failed to delete car.';
       toast.error(message, {
         position: toast.POSITION.TOP_CENTER,
       });
@@ -71,11 +74,12 @@ export const addCar = createAsyncThunk(
           Authorization: `Bearer ${token}`,
         },
       };
-      const { data } = await axios.post(
-        `${backendURL}/api/v1/cars/`,
-        car,
-        config,
-      );
+      const response = await fetch(`${backendURL}/api/v1/cars/`, {
+        method: 'POST',
+        headers: config.headers,
+        body: JSON.stringify(car),
+      });
+      const data = await response.json();
 
       toast.success(data.message, {
         position: toast.POSITION.TOP_CENTER,
