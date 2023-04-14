@@ -1,10 +1,10 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Exotic Rentals APP ](#-exotic-rentals-api-)
+- [📖 Car Rental App ](#-car-rental-app-)
   - [Kanban Board](#kanban-board)
   - [API Documentation](#api-documentation)
-  - [Backend](#frontend)
+  - [Backend](#backend)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -23,13 +23,13 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Exotic Rentals APP <a name="about-project"></a>
+# 📖 Car Rental App <a name="about-project"></a>
 
-**Rental a Car** is a car rental application that provides users with the ability to create an account, log in, and reserve a car for a designated time frame. It also allows users to browse through all available vehicles and view specific cars. Additionally, users can check their own booking history and view all reservations made by them.
+**Car Rental App** is a car rental application that provides users with the ability to create an account, log in, and reserve a car for a designated time frame. It also allows users to browse through all available vehicles and view specific cars. Additionally, users can check their own booking history and view all reservations made by them.
 
 ## Kanban Board <a name="kanban-board"></a>
 
-Collaboration team is made of 3 members:
+Collaboration team is made of 5 members:
 
 - Abeera Tahir
 - Vanel Nwaba
@@ -37,7 +37,10 @@ Collaboration team is made of 3 members:
 - Khomotso Mkansi
 - Zia Bakhteyari
 
-Kanban can be found [here](https://github.com/users/vanelnw/projects/4/views/1)
+### Initial State of Kanban:
+![kanban](https://user-images.githubusercontent.com/38879488/228954839-ecab1c29-7bad-4338-8b62-68f996f6ce7d.png)
+
+[Kanban Board Link](https://github.com/users/vanelnw/projects/4)
 
 ## API Documentation <a name="api-documentation"></a>
 
@@ -45,23 +48,16 @@ Kanban can be found [here](https://github.com/users/vanelnw/projects/4/views/1)
 
 ## Backend <a name="backend"></a>
 
-Backend app can be found [here](https://github.com/vanelnw/Appointment-Capstone-Backend.git)
+This is the backend for the car Rental Application. The frontend is made with react and can be found [here] (https://github.com/vanelnw/appointment-capstone-frontend.git)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>Server</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
-<details>
-  <summary>State Management</summary>
-  <ul>
-     <li><a href="https://redux.org/">Redux</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -74,9 +70,8 @@ Backend app can be found [here](https://github.com/vanelnw/Appointment-Capstone-
 
 ### Key Features <a name="key-features"></a>
 
-- **Redux state management**
-- **External API usage**
-- **User signup**
+- **Deploy application API on render**
+- **Update Api documentation with deployed url**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -104,22 +99,34 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/vanelnw/appointment-capstone-frontend.git
+  git clone https://github.com/vanelnw/Appointment-Capstone-Backend.git
 ```
 
 ### Install
 
 ```sh
-  cd appointment-capstone-frontend
-  npm install
+  cd Appointment-Capstone-Backend
+  bundle install
 ```
 
 ### Usage
 
 To run the project, execute the following command:
 
-```sh
-  npm start
+```
+  rails db:create
+```
+
+```
+  rails db:migrate
+```
+
+```
+  rails db:seed
+```
+
+```
+  rails server
 ```
 
 ### Run tests
@@ -127,7 +134,7 @@ To run the project, execute the following command:
 To run tests, run the following command:
 
 ```sh
-  npm test
+  rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -168,9 +175,8 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Integrate externalAPI of another booking site**
-- [ ] **It will allows users to give a review for a specific car.**
-- [ ] **Allow summary of review on a ceratin period**
+- [ ] **Integrate Admin action.**
+- [ ] **Integrate super users.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
