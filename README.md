@@ -29,7 +29,7 @@
 
 ## Kanban Board <a name="kanban-board"></a>
 
-Collaboration team is made of 3 members:
+Collaboration team is made of 5 members:
 
 - Abeera Tahir
 - Vanel Nwaba
@@ -69,8 +69,6 @@ Backend app can be found [here](https://github.com/vanelnw/Appointment-Capstone-
   </ul>
 </details>
 
-<details>
-
 ### Key Features <a name="key-features"></a>
 
 - **Redux state management**
@@ -94,7 +92,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 ```sh
- gem install rails
+
 ```
 
 ### Setup
