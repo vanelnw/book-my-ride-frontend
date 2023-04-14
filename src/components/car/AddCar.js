@@ -60,6 +60,7 @@ const AddCar = () => {
           />
 
           <input
+            className="addInput"
             type="text"
             id="image"
             value={image}
@@ -68,6 +69,7 @@ const AddCar = () => {
           />
 
           <textarea
+            className="addInput"
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -75,6 +77,7 @@ const AddCar = () => {
           />
 
           <input
+            className="addInput"
             type="number"
             id="daily-rate"
             value={dailyRate}
