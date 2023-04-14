@@ -5,7 +5,7 @@ export const fetchItems = createAsyncThunk('data/fetchItems', async () => {
   const headers = {
     Authorization: `Bearer ${jwtToken}`,
   };
-  const response = await fetch('http://127.0.0.1:4000/api/v1/reservations', {
+  const response = await fetch('https://rent-your-car.onrender.com/api/v1/reservations', {
     headers,
   });
   const data = await response.json();

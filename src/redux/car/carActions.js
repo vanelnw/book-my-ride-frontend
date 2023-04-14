@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import { toast } from 'react-toastify';
 
-const backendURL = 'http://127.0.0.1:4000';
+const backendURL = 'https://rent-your-car.onrender.com';
 
 const token = localStorage.getItem('userToken');
 
@@ -13,7 +13,7 @@ export const fetchItems = createAsyncThunk('cardata/fetchItems', async (_, { rej
     const headers = {
       Authorization: `Bearer ${jwtToken}`,
     };
-    const response = await fetch('http://127.0.0.1:4000/api/v1/cars', {
+    const response = await fetch('https://rent-your-car.onrender.com/api/v1/cars', {
       headers,
     });
     const cardata = await response.json();

@@ -2,7 +2,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 
-const backendURL = 'http://127.0.0.1:4000';
+const backendURL = 'https://rent-your-car.onrender.com';
 
 export const userLogin = createAsyncThunk(
   'auth/login',
