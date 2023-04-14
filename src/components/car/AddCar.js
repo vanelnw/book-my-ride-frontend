@@ -27,20 +27,18 @@ const AddCar = () => {
 
   return (
     <div className="addForm">
-
       <div className="innercontainer">
-        <div className="add-heading"><h2>Add a new car</h2></div>
+        <div className="add-heading">
+          <h2>Add a new car</h2>
+        </div>
         <form onSubmit={handleSubmit} className="add-form">
-          <label htmlFor="make" className="add-form-field">
-            Make:
-            <input
-              className="addInput"
-              type="text"
-              id="make"
-              value={make}
-              onChange={(e) => setMake(e.target.value)}
-            />
-          </label>
+          <input
+            className="addInput"
+            type="text"
+            id="make"
+            value={make}
+            onChange={(e) => setMake(e.target.value)}
+          />
 
           <label htmlFor="model" className="add-form-field">
             Model:
@@ -93,7 +91,9 @@ const AddCar = () => {
             />
           </label>
 
-          <button type="submit" className="btn-add-car">Add Car</button>
+          <button type="submit" className="btn-add-car">
+            Add Car
+          </button>
         </form>
       </div>
     </div>
