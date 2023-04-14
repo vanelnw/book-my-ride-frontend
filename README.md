@@ -37,7 +37,10 @@ Collaboration team is made of 3 members:
 - Khomotso Mkansi
 - Zia Bakhteyari
 
-Kanban can be found [here](https://github.com/users/vanelnw/projects/4/views/1)
+### Initial State of Kanban:
+![kanban](https://user-images.githubusercontent.com/38879488/228954839-ecab1c29-7bad-4338-8b62-68f996f6ce7d.png)
+
+[Kanban Board Link](https://github.com/users/vanelnw/projects/4)
 
 ## API Documentation <a name="api-documentation"></a>
 
