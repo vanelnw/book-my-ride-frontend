@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import '../../assets/stylesheets/nav.css';
 import logo from '../../assets/images/logo.png';
 import { logout } from '../../redux/auth/authSlice';
 
 const TopNav = () => {
+  const navigate = useNavigate();
   const { isAuthenticated } = useSelector((state) => state.auth);
   // const isLoggedIn = localStorage.getItem('isLoggedIn');
   const data = JSON.parse(localStorage.getItem('user'));
@@ -14,6 +15,7 @@ const TopNav = () => {
   const handleLogout = (e) => {
     e.preventDefault();
     dispatch(logout());
+    navigate('/login');
   };
 
   return (
@@ -36,17 +38,24 @@ const TopNav = () => {
               {data.email}
             </span>
             <button type="button" className="button" onClick={handleLogout}>
-              Logout
+              <Link to="/login" className="login">
+                Logout
+              </Link>
+
             </button>
           </div>
         ) : (
           <>
-            <button type="button" className="button">
-              <NavLink to="/login" className="login">Login</NavLink>
-            </button>
-            <button type="button" className="button">
-              <NavLink to="/register" className="signup">Register</NavLink>
-            </button>
+            <Link to="/login" className="login">
+              <button type="button" className="button">
+                Login
+              </button>
+            </Link>
+            <NavLink to="/register" className="signup">
+              <button type="button" className="button">
+                Register
+              </button>
+            </NavLink>
 
           </>
         )

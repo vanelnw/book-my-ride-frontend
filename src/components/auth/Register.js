@@ -1,15 +1,14 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerUser } from '../../redux/auth/authActions';
 
 const RegisterScreen = () => {
-  const { loading, userInfo, success } = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+  const { loading } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
-
-  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -28,17 +27,11 @@ const RegisterScreen = () => {
     }));
   };
 
-  useEffect(() => {
-    // redirect user to login page if registration was successful
-    if (success) navigate('/login');
-    // redirect authenticated user to profile screen
-    // if (userInfo) navigate('/user-profile');
-  }, [navigate, userInfo, success]);
-
   const submitForm = (e) => {
     e.preventDefault();
     if (formData.password === formData.confirmPassword) {
       dispatch(registerUser(formData));
+      navigate('/login');
     } else {
       setErrorMessage('Password does not match!');
     }

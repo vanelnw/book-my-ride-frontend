@@ -1,7 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
 import { toast } from 'react-toastify';
 
 const backendURL = 'http://127.0.0.1:4000';
@@ -11,15 +9,15 @@ export const userLogin = createAsyncThunk(
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const config = {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ email, password }),
       };
-      const { data } = await axios.post(
-        `${backendURL}/api/v1/auth/login`,
-        { email, password },
-        config,
-      );
+      const response = await fetch(`${backendURL}/api/v1/auth/login`, config);
+      const data = await response.json();
+
       // store user's token in local storage
       localStorage.setItem('userToken', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
@@ -46,15 +44,14 @@ export const registerUser = createAsyncThunk(
   async ({ name, email, password }, { rejectWithValue }) => {
     try {
       const config = {
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ name, email, password }),
       };
-      const { data } = await axios.post(
-        `${backendURL}/api/v1/auth/register/`,
-        { name, email, password },
-        config,
-      );
+      const response = await fetch(`${backendURL}/api/v1/auth/register/`, config);
+      const data = await response.json();
 
       toast.success(data.message, {
         position: toast.POSITION.TOP_CENTER,

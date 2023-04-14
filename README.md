@@ -6,7 +6,7 @@
   - [API Documentation](#api-documentation)
   - [Backend](#frontend)
   - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
+    - [Tech Stack ](#tech-stack-)z
     - [Key Features ](#key-features-)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
@@ -69,11 +69,6 @@ Backend app can be found [here](https://github.com/vanelnw/Appointment-Capstone-
 </details>
 
 <details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
 
 ### Key Features <a name="key-features"></a>
 

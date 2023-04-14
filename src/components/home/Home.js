@@ -13,7 +13,12 @@ const Home = () => {
   }, [dispatch]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-container">
+        <div className="circle" />
+        <h1 className="loading">Loading...</h1>
+      </div>
+    );
   }
 
   if (error) {

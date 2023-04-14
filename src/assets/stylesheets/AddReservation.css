@@ -8,17 +8,6 @@
   z-index: 2;
 }
 
-/* .add-reservation-page::before {
-  content: '';
-  position: absolute;
-  top: 100px;
-  right: 0;
-  width:calc(100% - 200px);
-  height:calc(100vh - 100px);
-  background: rgba(151, 191, 14, 0.5);;
-  z-index: -1;
-} */
-
 .message {
   font-weight: bold;
   text-align: center;
@@ -31,18 +20,6 @@
 .error {
   color: red;
 }
-
-/* .add-reservation-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  align-items: center;
-  width: 25%;
-} */
 
 .add-reservation-container {
   background: rgba(151, 191, 14, 0.6);
@@ -84,6 +61,10 @@
   color: #fff;
 }
 
+.reservation-item > #username {
+  text-align: center;
+}
+
 input {
   background-color: transparent;
   outline: none;
@@ -91,12 +72,6 @@ input {
   border: 2px solid white;
   border-radius: 50px;
   padding: 10px;
-}
-
-input[type="text"] {
-  text-align: center;
-
-  /* width: 113px; */
 }
 
 select {
