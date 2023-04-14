@@ -2,9 +2,7 @@
   background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  color: white;
+  background-size: 100% 100%;
   z-index: 2;
 }
 
