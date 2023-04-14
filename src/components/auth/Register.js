@@ -1,10 +1,11 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { registerUser } from '../../redux/auth/authActions';
 
 const RegisterScreen = () => {
+  const navigate = useNavigate();
   const { loading } = useSelector((state) => state.auth);
 
   const dispatch = useDispatch();
@@ -30,6 +31,7 @@ const RegisterScreen = () => {
     e.preventDefault();
     if (formData.password === formData.confirmPassword) {
       dispatch(registerUser(formData));
+      navigate('/login');
     } else {
       setErrorMessage('Password does not match!');
     }

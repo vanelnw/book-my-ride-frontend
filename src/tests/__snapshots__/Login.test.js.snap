@@ -14,7 +14,9 @@ Object {
           <div
             class="top"
           >
-            <span>
+            <span
+              class="color-white"
+            >
               Don't have an account yet? 
               <a
                 href="/register"
@@ -52,35 +54,6 @@ Object {
           >
             Login
           </button>
-          <div
-            class="two-col"
-          >
-            <div
-              class="one"
-            >
-              <input
-                id="check"
-                name=""
-                type="checkbox"
-              />
-              <label
-                for="check"
-              >
-                 Remember Me
-              </label>
-            </div>
-            <div
-              class="two"
-            >
-              <label>
-                <a
-                  href="./LOGIN"
-                >
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-          </div>
         </form>
       </div>
     </div>
@@ -95,7 +68,9 @@ Object {
         <div
           class="top"
         >
-          <span>
+          <span
+            class="color-white"
+          >
             Don't have an account yet? 
             <a
               href="/register"
@@ -133,35 +108,6 @@ Object {
         >
           Login
         </button>
-        <div
-          class="two-col"
-        >
-          <div
-            class="one"
-          >
-            <input
-              id="check"
-              name=""
-              type="checkbox"
-            />
-            <label
-              for="check"
-            >
-               Remember Me
-            </label>
-          </div>
-          <div
-            class="two"
-          >
-            <label>
-              <a
-                href="./LOGIN"
-              >
-                Forgot password?
-              </a>
-            </label>
-          </div>
-        </div>
       </form>
     </div>
   </div>,

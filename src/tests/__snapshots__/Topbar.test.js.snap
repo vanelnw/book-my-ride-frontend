@@ -20,28 +20,28 @@ Object {
         <div
           class="auth"
         >
-          <button
-            class="button"
-            type="button"
+          <a
+            class="login"
+            href="/login"
           >
-            <a
-              class="login"
-              href="/login"
+            <button
+              class="button"
+              type="button"
             >
               Login
-            </a>
-          </button>
-          <button
-            class="button"
-            type="button"
+            </button>
+          </a>
+          <a
+            class="signup"
+            href="/register"
           >
-            <a
-              class="signup"
-              href="/register"
+            <button
+              class="button"
+              type="button"
             >
               Register
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -62,28 +62,28 @@ Object {
       <div
         class="auth"
       >
-        <button
-          class="button"
-          type="button"
+        <a
+          class="login"
+          href="/login"
         >
-          <a
-            class="login"
-            href="/login"
+          <button
+            class="button"
+            type="button"
           >
             Login
-          </a>
-        </button>
-        <button
-          class="button"
-          type="button"
+          </button>
+        </a>
+        <a
+          class="signup"
+          href="/register"
         >
-          <a
-            class="signup"
-            href="/register"
+          <button
+            class="button"
+            type="button"
           >
             Register
-          </a>
-        </button>
+          </button>
+        </a>
       </div>
     </div>
   </div>,
