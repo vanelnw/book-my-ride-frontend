@@ -148,7 +148,7 @@ To run tests, run the following command:
 👤 **Vanel Nwaba**
 
 - GitHub: [@vanelnw](https://github.com/vanelnw)
-- LinkedIn: [Vanel Nwaba](https://www.linkedin.com/in/va-nw/) 
+- LinkedIn: [Vanel Nwaba](https://www.linkedin.com/in/va-nw/)
 - Twitter: [@vanelnw](#)
 
 👤 **Ezema Anthony Sunday**
@@ -189,9 +189,7 @@ If you like this project consider giving it a star ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for giving me the opportunity to work on this project.
-
-- Microverse
+Special thank to [Murat Korkmaz](https://www.behance.net/muratk) for providing the design guidelines.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
