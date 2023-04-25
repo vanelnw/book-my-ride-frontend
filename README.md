@@ -145,7 +145,7 @@ To run tests, run the following command:
 👤 **Vanel Nwaba**
 
 - GitHub: [@vanelnw](https://github.com/vanelnw)
-- LinkedIn: [Vanel Nwaba](https://www.linkedin.com/in/va-nw/)
+- LinkedIn: [Vanel Nwaba](https://www.linkedin.com/in/va-nw)
 - Twitter: [@vanelnw](#)
 
 👤 **Ezema Anthony Sunday**
