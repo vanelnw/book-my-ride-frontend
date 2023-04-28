@@ -4,18 +4,18 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: 2;
+  height: 100%;
 }
 
 .innercontainer {
   background-color: rgba(151, 191, 14, 0.8);
   padding-top: 30px;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
-  border: 1px solid red;
+  height: 100%;
 }
 
 .add-form {
