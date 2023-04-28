@@ -1,0 +1,81 @@
+.addForm {
+  background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 2;
+  height: 100%;
+}
+
+.innercontainer {
+  background-color: rgba(151, 191, 14, 0.8);
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  height: 100%;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.add-form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.add-form-field > span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.addInput,
+textarea {
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: 2px solid #ccc;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+}
+
+.addInput {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn-add-car {
+  width: 100%;
+  background-color: #44de07;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-add-car:hover {
+  background-color: #2eb504;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

@@ -1,0 +1,275 @@
+body,
+html {
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.color-white {
+  color: white;
+}
+
+.home {
+  flex: 1;
+  min-height: calc(100vh - 60px);
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    margin-left: 200px;
+    min-height: calc(100vh - 85px);
+  }
+
+  .home.full {
+    margin-left: 0;
+  }
+}
+
+.loginPage,
+.registerPage {
+  background-image: url('../images/Best\ Car\ Wallpapers\ Hd\ 35\ Pictures.jpg');
+  height: calc(100vh - 85px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+}
+
+.AppContainer {
+  display: flex;
+}
+
+.form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px 0 15px;
+  gap: 20px;
+}
+
+span {
+  color: #fff;
+  font-size: small;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+header {
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.input-field input {
+  height: 45px;
+  width: 87%;
+  border: none;
+  border-radius: 30px;
+  color: black;
+  font-size: 15px;
+  padding: 0 0 0 45px;
+  background: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+.reg-field {
+  margin-bottom: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: #121212;
+}
+
+.whiteLink {
+  color: #fff;
+}
+
+.submit {
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  height: 45px;
+  outline: none;
+  width: 100%;
+  color: rgb(249, 249, 249);
+  background: rgb(19, 194, 51);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+
+.two-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  font-size: medium;
+  margin-top: 10px;
+}
+
+.one {
+  display: flex;
+}
+
+label a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.errorMessage {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.my-reservations-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.my-reservations-container > .heading {
+  width: 100%;
+  text-align: center;
+}
+
+.reservation {
+  background-color: #e5e7cf;
+  width: 380px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.car-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.reserved-car-details > p {
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  .my-reservations-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .reservation {
+    width: 200px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .car-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+  }
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+  width: 100%;
+  border-radius: 0.125rem;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 96%);
+  }
+}
+
+.loading-container {
+  height: 1000px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  margin: 200px auto;
+  width: 100px;
+  height: 100px;
+  border: 10px solid rgba(7, 148, 235, 0.2);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  margin-top: -150px;
+  color: #060606;
+}
+
+.carContainer {
+  width: 30%;
+  height: auto;
+  min-width: 400px;
+}

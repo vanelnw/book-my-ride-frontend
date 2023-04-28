@@ -1,0 +1,114 @@
+.deleteContainer {
+  flex: 1;
+  background-image: url("../images/audi-auto-vehicle-sports-car.jpeg");
+  min-height: calc(100vh - 90px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 20px;
+}
+
+.deleteContainer > h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.deleteContainer > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.delete-item {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  display: grid;
+  grid-template-columns: 20% 45% 10% 18%;
+  background-color: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.car-Container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.car-Container > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.description p {
+  color: black;
+  text-align: left;
+  padding-top: 15px;
+  max-width: 150px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.delete-item button {
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border: none;
+  font-size: medium;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 500px) {
+  .deleteContainer {
+    padding: 20px 50px;
+  }
+
+  .deleteContainer > ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .car-Container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .delete-item {
+    width: 100%;
+    padding: 5px 15px;
+    border-radius: 20px;
+    color: black;
+    display: grid;
+    grid-template-columns: 20% 45% 10% 18%;
+    background-color: rgba(255, 255, 255, 0.8);
+    align-items: center;
+  }
+
+  .delete-item button {
+    background-color: red;
+    padding: 10px 20px;
+  }
+
+  .description p {
+    color: black;
+    text-align: left;
+    padding-top: 15px;
+    max-width: 300px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+}

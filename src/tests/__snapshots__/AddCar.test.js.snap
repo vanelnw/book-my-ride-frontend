@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add car component should render correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="addForm"
+      >
+        <div
+          class="innercontainer"
+        >
+          <div
+            class="add-heading"
+          >
+            <h2>
+              Add a new car
+            </h2>
+          </div>
+          <form
+            class="add-form"
+          >
+            <input
+              class="addInput"
+              id="make"
+              placeholder="Make"
+              type="text"
+              value=""
+            />
+            <input
+              class="addInput"
+              id="model"
+              placeholder="Model"
+              type="text"
+              value=""
+            />
+            <input
+              class="addInput"
+              id="year"
+              placeholder="Year"
+              type="text"
+              value=""
+            />
+            <input
+              class="addInput"
+              id="image"
+              placeholder="Image-url"
+              type="text"
+              value=""
+            />
+            <textarea
+              class="addInput"
+              id="description"
+              placeholder="Descriptions"
+            />
+            <input
+              class="addInput"
+              id="daily-rate"
+              placeholder="Daily Rate"
+              type="number"
+              value=""
+            />
+            <button
+              class="btn-add-car"
+              type="submit"
+            >
+              Add Car
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="addForm"
+    >
+      <div
+        class="innercontainer"
+      >
+        <div
+          class="add-heading"
+        >
+          <h2>
+            Add a new car
+          </h2>
+        </div>
+        <form
+          class="add-form"
+        >
+          <input
+            class="addInput"
+            id="make"
+            placeholder="Make"
+            type="text"
+            value=""
+          />
+          <input
+            class="addInput"
+            id="model"
+            placeholder="Model"
+            type="text"
+            value=""
+          />
+          <input
+            class="addInput"
+            id="year"
+            placeholder="Year"
+            type="text"
+            value=""
+          />
+          <input
+            class="addInput"
+            id="image"
+            placeholder="Image-url"
+            type="text"
+            value=""
+          />
+          <textarea
+            class="addInput"
+            id="description"
+            placeholder="Descriptions"
+          />
+          <input
+            class="addInput"
+            id="daily-rate"
+            placeholder="Daily Rate"
+            type="number"
+            value=""
+          />
+          <button
+            class="btn-add-car"
+            type="submit"
+          >
+            Add Car
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
