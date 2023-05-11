@@ -7,7 +7,6 @@ import { logout } from '../../features/auth/authSlice';
 
 const TopNav = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
-  // const isLoggedIn = localStorage.getItem('isLoggedIn');
   const data = JSON.parse(localStorage.getItem('user'));
   const dispatch = useDispatch();
 
@@ -51,7 +50,6 @@ const TopNav = () => {
           </>
         )
       }
-
       </div>
     </div>
   );
